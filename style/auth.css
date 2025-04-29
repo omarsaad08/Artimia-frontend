@@ -1,3 +1,12 @@
 /* 
     style for sign in and sign up pages
 */
+body {
+    background-image: url('/assets/background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+label {
+    color: black;
+}

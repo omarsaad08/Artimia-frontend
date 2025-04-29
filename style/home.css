@@ -1,0 +1,176 @@
+/* landing */
+.content-section {
+    padding: 60px 0;
+}
+
+.section-image {
+    width: 80%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.section-content {
+    padding: 20px;
+}
+
+.section-content a {
+    background-color: var(--clr1);
+    color: var(--bg);
+    border: 2px solid transparent;
+}
+
+.section-content a:hover {
+    color: var(--clr1);
+    background-color: transparent;
+    border: 2px solid var(--clr1);
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid var(--clr1);
+    padding: 12px;
+    border-radius: 20px;
+}
+
+@media (max-width: 767.98px) {
+    .section-content {
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .img-container {
+        order: -1;
+        /* Makes image appear first on mobile */
+    }
+}
+
+/* gallery */
+.features-section {
+    background-color: var(--bg);
+
+    padding: 80px 0;
+}
+
+.features-section .container {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.feature-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-image:hover {
+    transform: scale(1.03);
+}
+
+.feature-card {
+    padding: 20px;
+    text-align: center;
+}
+
+.feature-title {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* Testimonials */
+.testimonials-section {
+    background-color: var(--clr1);
+    padding: 80px 0;
+}
+
+.testimonial-card {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bg);
+}
+
+/* Carousel */
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Remove default indicators */
+.carousel-indicators {
+    display: none;
+}
+
+/* Remove navigation arrows */
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+/* Flying image styling */
+.flying-image {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: auto;
+    z-index: 10;
+    animation: float 3s ease-in-out infinite;
+
+    background-image: url('/assets/fareed-back.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-60%) translateX(5px);
+    }
+
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+/* Make sure carousel is full width */
+.carousel {
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .flying-image {
+        width: 100px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .flying-image {
+        display: none;
+        /* Hide on very small screens */
+    }
+}

@@ -1,0 +1,71 @@
+:root {
+    --clr1: #543310;
+    --clr2: #74512D;
+    --clr3: #AF8F6F;
+    --bg: #F8F4E1;
+    --head-font: 'Playfair Display';
+    --main-font: 'Rubik'
+}
+
+body {
+    font-family: var(--main-font);
+    height: 5000px;
+}
+
+/* navbar */
+nav {
+    background-color: var(--bg) !important;
+    color: white !important;
+}
+
+nav .container>div {
+    gap: 12px;
+}
+
+nav .container a:first-child img {
+    width: 64px;
+}
+
+nav ul.navbar-nav {
+    gap: 12px;
+}
+
+
+nav ul.navbar-nav li a,
+nav ul.navbar-nav li a.active {
+    display: block;
+    background-color: var(--clr1) !important;
+    border-radius: 20px;
+    padding: 8px 12px;
+    color: var(--bg) !important;
+    min-width: 76px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+nav ul.navbar-nav li a:hover {
+    background-color: var(--clr3) !important;
+    color: var(--bg);
+}
+
+nav .auth {
+    gap: 12px;
+}
+
+nav .auth :first-child {
+    background-color: var(--clr3);
+    color: var(--bg);
+    border: none;
+}
+
+nav .auth :last-child {
+    border-color: var(--clr1);
+    border-width: 2px;
+    color: var(--clr1);
+    font-weight: bold;
+}
+
+nav .auth :last-child:hover {
+    background: transparent;
+}
