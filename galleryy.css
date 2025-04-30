@@ -1,0 +1,181 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; 
+    background-color: rgba(255, 228, 196, 0.529); 
+  } 
+
+  body {
+    margin: 0; 
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-end; 
+    font-family: Arial, sans-serif;
+   
+ 
+  }
+ html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  h1, h2, h3, h4, h5, h6, p, div,img {
+    background: transparent;
+  }
+
+
+  /*<<<<<<<<<<<<<<<<<<<      first container      >>>>>>>>>>>>>>*/
+
+
+.container-fluid {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+/*navbar top*/
+.navbar-top{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: rgba(255, 228, 196, 0.529);
+}
+/*navbar top*/
+.nav-item{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
+    background-color: transparent;
+    
+}
+
+
+.social-link i img{
+    background-color: transparent;
+    margin-left:10px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.sociala-link i img:hover{
+    border-radius: 50px ;
+}
+@media screen and (max-width:420px){
+    .social-link i img{
+        width:20px;
+    }
+}
+
+.logo{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
+    background: transparent;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-weight: 20px bold;
+}
+@media screen and (max-width:420px){
+    .logo h3{
+        font-size: 0px;
+        border: 0px;
+    }
+}
+
+.icons i img{
+
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+@media screen and (max-width:420px){
+    .icons i img{
+        width:20px;
+    }
+}
+/*navbar top*/
+
+
+/*navbar content*/
+#navbar-color{
+    background-color: rgba(238, 224, 208, 0.447);
+}
+.navbar-nav{
+
+    background: transparent;
+    margin: auto;
+}
+
+.navbar{
+
+    background: transparent;
+}
+
+.nav-link{
+    margin-left: 30px;
+    font-weight: bold;
+    color: rgb(104, 49, 49);
+    cursor: pointer;
+}
+.nav-link:hover{
+    color: rgb(184, 115, 75);
+}
+/*navbar content*/
+  /*<<<<<<<<<<<<<<<<<<    intro       >>>>>>>>>>>>>>>>>*/
+  
+
+/* <<<<<<<<<<<<<<<<         content          >>>>>>>>>>>>>>>>>*/
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .section {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+  }
+
+  .section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .overlay-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .farid {
+    position: absolute;top: 50%;
+    left: 10%;
+    width: 50%;
+    max-width: 350px;
+    height: 50%;
+    min-height: 50%;
+    
+    transform: translateX(-50%);
+    z-index: 3;
+    max-height: 150px;
+  }
