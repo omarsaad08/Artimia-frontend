@@ -1,0 +1,454 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box; 
+    background-color: rgba(255, 228, 196, 0.529); 
+  } 
+
+  body {
+    margin: 0; 
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: flex-end; 
+    font-family: Arial, sans-serif;
+   
+ 
+  }
+  h1, h2, h3, h4, h5, h6, p, div,img {
+    background: transparent;
+  }
+
+
+  /*<<<<<<<<<<<<<<<<<<<      first container      >>>>>>>>>>>>>>*/
+
+
+.container-fluid {
+    margin: 0;
+    padding: 0 20px;
+    width: 100%;
+  }
+/*navbar top*/
+.navbar-top{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color: rgba(255, 228, 196, 0.529);
+}
+/*navbar top*/
+.nav-item{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
+    background-color: transparent;
+    
+}
+
+
+.social-link i img{
+    background-color: transparent;
+    margin-left:10px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.sociala-link i img:hover{
+    border-radius: 50px ;
+}
+@media screen and (max-width:420px){
+    .social-link i img{
+        width:20px;
+    }
+}
+
+.logo{
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
+    background: transparent;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-weight: 20px bold;
+}
+@media screen and (max-width:420px){
+    .logo h3{
+        font-size: 0px;
+        border: 0px;
+    }
+}
+
+.icons i img{
+
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+@media screen and (max-width:420px){
+    .icons i img{
+        width:20px;
+    }
+}
+/*navbar top*/
+
+
+/*navbar content*/
+#navbar-color{
+    background-color: rgba(238, 224, 208, 0.447);
+}
+.navbar-nav{
+
+    background: transparent;
+    margin: auto;
+}
+
+.navbar{
+
+    background: transparent;
+}
+
+.nav-link{
+    margin-left: 30px;
+    font-weight: bold;
+    color: rgb(104, 49, 49);
+    cursor: pointer;
+}
+.nav-link:hover{
+    color: rgb(184, 115, 75);
+}
+/*navbar content*/
+  /*<<<<<<<<<<<<<<<<<<    intro       >>>>>>>>>>>>>>>>>*/
+  
+
+  .main-content{
+    width: 100%;
+    height: 90vh;
+    background-image: url(/brand\ content/intro3.png);
+    background-color: antiquewhite;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.fareed {
+    position: absolute;
+    bottom: 0%; 
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+    width: 50%; 
+  }
+#farid1 {
+    width: 30%; 
+    height: auto;
+    padding-bottom: 0%;
+    z-index: 1000;
+ }
+#fspeech1 {
+    position: absolute;
+    top: -100px; 
+    left: 30%;
+    transform: translateX(-50%);
+    background: #ffe9c85a;
+    border-radius: 40%;
+    padding: 15px 20px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
+    max-width: 500px;
+  }
+ 
+ @media (max-width: 1000px) {
+    .fareed {
+        display: flex; 
+        display: inline-block;
+        width: auto; 
+        height: auto;
+      }
+    #farid1 {
+        width: 20%;
+        min-width: 30%;    
+    }
+    #fspeech1 {
+        right: 30%x; ;     
+        max-width: 250px; 
+    }
+}
+
+
+
+ /*<<<<<<<<<<<<<<<<          second container          >>>>>>>>>>>>>>>>>>*/
+.frist-container{
+    margin-inline: 0%;
+    margin-bottom: 30%;
+    inline-size: 0;
+    padding: 0px;
+    left:20%;   
+}
+
+
+ /*   +++++++++++++  fareed  ++++++++++++  */
+ .fareed2 {
+    position: relative;
+    display: flex; 
+    margin-top: 10%;
+    width: auto; 
+    height: auto;
+    left: 0px;
+    right: 0px;
+  }
+ #farid2{
+    width: 20%;
+    height: auto; 
+    left: 60%;
+
+}
+#speech2{
+    position: absolute;
+    top: 0;
+    margin-left: 50%;                
+    padding: 3%;
+    bottom: 20%;
+    right: 50%;
+    background-color: rgba(249, 232, 210, 0.374); 
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+  @media (max-width: 1000px) {
+    .character-area {
+        display: flex; 
+        display: inline-block;
+        width: auto; 
+        height: auto;
+      }
+    #farid2 {
+        width: 20%;
+        min-width: 30%;    
+    }
+    #speech2 {
+        right: 30%x; ;     
+        max-width: 250px; 
+    }
+}
+.categories{
+    max-width: 100%;
+    padding: 0px;
+}
+.carousel-container{
+    width: 100%;
+}
+.slideRow{
+    margin: 0;
+    padding-inline: 0px;
+    
+
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@          carousells         @@@@@@@@@@@@@@@@@@@@*/
+
+.col4{
+    padding: 0;
+}
+.slides{
+    width: 100%;
+    gap: 2%;
+ }
+ .slides1{
+    width: 120%;
+    right: 20%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 30%;
+    padding-top: 0px;
+    padding-bottom: 0px; 
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);;
+ }
+ .slides2{
+    width: 120%;
+    left: 35%;
+
+    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-inline: 0%;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+     
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+ }
+.slides3 {
+    width: 120%;
+    left: 80%;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px; 
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+.carousel-item{
+    object-fit: cover;
+    padding:0%;
+    width: 70%;   
+}
+
+
+
+
+ /*<<<<<<<<<<<<<<<<          second container          >>>>>>>>>>>>>>>>>>*/
+ /*<<<<<<<<<<<<<<<<          second container          >>>>>>>>>>>>>>>>>>*/
+ /*<<<<<<<<<<<<<<<<          second container          >>>>>>>>>>>>>>>>>>*/
+
+
+ .second-container{ 
+    width: 100%; 
+    bottom: 30%;
+}
+
+
+ /*   +++++++++++++  fareed  ++++++++++++  */
+ 
+ .fareed3 {
+    width: 100%;
+    height: 17vh;
+    position: relative;
+    margin-top: 180px;
+  }
+ #farid3{
+    width: 25%;
+    position: absolute;
+    left: 1%;
+    bottom: -2%;
+  }
+#speech3{
+    width: 50%;
+    position:absolute ;
+    justify-content: center;
+
+    right: 30%;
+    background-color: rgba(249, 232, 210, 0.374); 
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+  @media (max-width: 1000px) {
+    .columnF1 {
+        display: flex; 
+        width: auto; 
+        height: auto;
+      }
+    #farid3 {
+        width:30%;
+        min-width: 20%;    
+    }
+    #speech3 {
+        right: 30%;     
+        max-width: 250px; 
+    }
+}
+.categories{
+    max-width: 100%;
+    padding: 0px;
+}
+.carousel-container{
+    width: 100%;
+}
+.slideRow{
+    margin: 0;
+    padding-inline: 0px;
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@          carousells         @@@@@@@@@@@@@@@@@@@@*/
+
+.column1{
+    margin-top:0% ;
+}
+.Bslides{
+    width: 95%;
+    position: absolute;
+    gap: .5%;
+ }
+ .Bslides1{
+    width: 120%;
+    left: 50%;
+
+    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-inline: 0%;
+
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);;
+ }
+ .Bslides2{
+    width: 120%;
+    left: 75%;
+
+    margin-top: 0px;
+    margin-bottom: 10%;
+    margin-inline: 0%;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+     
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+ }
+.Bslides3 {
+    width: 120%;
+    position: absolute;
+    left: 100%;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0;
+    margin-right: 0;
+
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+
+.carousel-item{
+    object-fit: cover;
+    padding:0%;
+}
+
+
+/* <<<<<<<<<<   footer  >>>>>>>>>*/
+
+#footer{
+    width: 100%;
+    background-color: rgb(95, 50, 30);
+    margin-top: 400px;
+}
+#footer h1{
+    color: white;
+    padding-top: 30px;
+}
+#footer p{
+    color:white
+}
+.icons{
+    background-color: transparent;
+    color: rgb(241, 221, 184);
+    font-size: 30px;
+    cursor: pointer;
+}
+.copyright{
+    justify-content: center;
+    color: white;
+    margin-top: 20px;
+}
+.cridet{
+    color: aliceblue;
+}
