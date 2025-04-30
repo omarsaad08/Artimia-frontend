@@ -12,8 +12,6 @@
     justify-content: center;
     align-items: flex-end; 
     font-family: Arial, sans-serif;
-   
- 
   }
  html {
     margin: 0;
@@ -34,96 +32,99 @@
     width: 100%;
   }
 /*navbar top*/
+.top{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  background-color: transparent;
+}
 .navbar-top{
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    background-color: rgba(255, 228, 196, 0.529);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center space-between;
+  background-color: rgb(255, 228, 196);
 }
-/*navbar top*/
 .nav-item{
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
-    background-color: transparent;
-    
+  background-color: transparent;
 }
+.navbar{
+  z-index: 999;
+  margin: 0;
+  width: 100%;
+  justify-content: center;
+  background-color: rgba(238, 222, 204, 0.51);
+  box-shadow: inset;
 
+}
+.navbar-toggler{
+  background-color: transparent;
+}
+.navbar-nav{
+  background-color: transparent;
+}
 
 .social-link i img{
-    background-color: transparent;
-    margin-left:10px;
-    transition: 1s ease;
-    cursor: pointer;
+  background-color: transparent;
+  margin-left:10px;
+  transition: 1s ease;
+  cursor: pointer;
 }
 .sociala-link i img:hover{
-    border-radius: 50px ;
+  border-radius: 50px ;
 }
 @media screen and (max-width:420px){
-    .social-link i img{
-        width:20px;
-    }
+  .social-link i img{
+      width:20px;
+  }
 }
 
 .logo{
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
-    background: transparent;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    font-weight: 20px bold;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
+  background: transparent;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  font-weight: 20px bold;
 }
 @media screen and (max-width:420px){
-    .logo h3{
-        font-size: 0px;
-        border: 0px;
-    }
+  .logo h3{
+      font-size: 0px;
+      border: 0px;
+  }
 }
 
 .icons i img{
 
-    margin-left: 10px;
-    border-radius: 50%;
-    cursor: pointer;
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 @media screen and (max-width:420px){
-    .icons i img{
-        width:20px;
-    }
+  .icons i img{
+      width:20px;
+  }
 }
-/*navbar top*/
 
 
-/*navbar content*/
-#navbar-color{
-    background-color: rgba(238, 224, 208, 0.447);
-}
 .navbar-nav{
-
-    background: transparent;
-    margin: auto;
-}
-
-.navbar{
-
-    background: transparent;
+  justify-content: center;
 }
 
 .nav-link{
-    margin-left: 30px;
-    font-weight: bold;
-    color: rgb(104, 49, 49);
-    cursor: pointer;
+  margin-left: 30px;
+  font-weight: bold;
+  color: rgb(104, 49, 49);
+  cursor: pointer;
 }
 .nav-link:hover{
-    color: rgb(184, 115, 75);
+  color: rgb(184, 115, 75);
 }
-/*navbar content*/
   /*<<<<<<<<<<<<<<<<<<    intro       >>>>>>>>>>>>>>>>>*/
   
 
