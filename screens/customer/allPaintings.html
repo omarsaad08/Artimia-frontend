@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery - Browse Paintings</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/normalize.css" />
+    <link rel="stylesheet" href="/style/import.css" />
+    <link rel="stylesheet" href="/style/allPaintings.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/assets/Artimia.png" alt="" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/screens/customer/allPaintings.html">Paintings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Workshops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/screens/customer/cart.html">Cart</a>
+                    </li>
+                </ul>
+                <div class="auth d-flex">
+                    <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
+                    <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Browse Paintings</h1>
+            <div class="view-options">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-secondary active">
+                        <i class="fas fa-th"></i> Grid
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary">
+                        <i class="fas fa-list"></i> List
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter and Sort Section -->
+        <div class="filter-section">
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label for="categoryFilter" class="form-label">Category</label>
+                    <select class="form-select" id="categoryFilter">
+                        <option selected>All Categories</option>
+                        <option>Landscape</option>
+                        <option>Portrait</option>
+                        <option>Abstract</option>
+                        <option>Still Life</option>
+                        <option>Contemporary</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="mediumFilter" class="form-label">Medium</label>
+                    <select class="form-select" id="mediumFilter">
+                        <option selected>All Mediums</option>
+                        <option>Oil</option>
+                        <option>Acrylic</option>
+                        <option>Watercolor</option>
+                        <option>Mixed Media</option>
+                        <option>Digital</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="priceFilter" class="form-label">Price Range</label>
+                    <select class="form-select" id="priceFilter">
+                        <option selected>All Prices</option>
+                        <option>Under $500</option>
+                        <option>$500 - $1,000</option>
+                        <option>$1,000 - $2,500</option>
+                        <option>Over $2,500</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="sortBy" class="form-label">Sort By</label>
+                    <select class="form-select" id="sortBy">
+                        <option selected>Featured</option>
+                        <option>Newest</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Most Popular</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paintings Grid -->
+        <div class="row">
+            <!-- Painting 1 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card artwork-card">
+                    <div class="position-relative">
+                        <img src="/assets/gallery1.jpg" class="artwork-img" alt="Mountain Sunset">
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <span class="artwork-status bg-success">Available</span>
+                        <span class="artist-badge">By Artist Name</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Mountain Sunset</h5>
+                        <p class="card-text text-muted">Oil on canvas • 24" × 36"</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">$1,200</span>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painting 2 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card artwork-card">
+                    <div class="position-relative">
+                        <img src="/assets/gallery2.jpg" class="artwork-img" alt="Ocean Waves">
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <span class="artwork-status bg-secondary">Sold</span>
+                        <span class="artist-badge">By Artist Name</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Ocean Waves</h5>
+                        <p class="card-text text-muted">Acrylic • 18" × 24"</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">$850</span>
+                            <button class="btn btn-sm btn-outline-secondary" disabled>
+                                Sold Out
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painting 3 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card artwork-card">
+                    <div class="position-relative">
+                        <img src="/assets/gallery3.jpg" class="artwork-img" alt="Urban Life">
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <span class="artwork-status bg-success">Available</span>
+                        <span class="artist-badge">By Artist Name</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Urban Life</h5>
+                        <p class="card-text text-muted">Watercolor • 12" × 16"</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">$600</span>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painting 4 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card artwork-card">
+                    <div class="position-relative">
+                        <img src="/assets/gallery1.jpg" class="artwork-img" alt="Forest Path">
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <span class="artwork-status bg-success">Available</span>
+                        <span class="artist-badge">By Artist Name</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Forest Path</h5>
+                        <p class="card-text text-muted">Oil • 20" × 30"</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">$950</span>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painting 5 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card artwork-card">
+                    <div class="position-relative">
+                        <img src="/assets/gallery2.jpg" class="artwork-img" alt="Abstract Thoughts">
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <span class="artwork-status bg-warning text-dark">Only 1 Left</span>
+                        <span class="artist-badge">By Artist Name</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Abstract Thoughts</h5>
+                        <p class="card-text text-muted">Mixed Media • 24" × 24"</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">$1,500</span>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painting 6 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card artwork-card">
+                    <div class="position-relative">
+                        <img src="/assets/gallery3.jpg" class="artwork-img" alt="Desert Mirage">
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <span class="artwork-status bg-success">Available</span>
+                        <span class="artist-badge">By Artist Name</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Desert Mirage</h5>
+                        <p class="card-text text-muted">Acrylic • 16" × 20"</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">$750</span>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painting 7 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card artwork-card">
+                    <div class="position-relative">
+                        <img src="/assets/gallery1.jpg" class="artwork-img" alt="Coastal Breeze">
+                        <button class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <span class="artwork-status bg-success">Available</span>
+                        <span class="artist-badge">By Artist Name</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Coastal Breeze</h5>
+                        <p class="card-text text-muted">Watercolor • 14" × 18"</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">$550</span>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painting 8 -->
+            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
+                <div class="card artwork-card">
+                    <div class="position-relative">
+                        <img src="/assets/gallery2.jpg" class="artwork-img" alt="City Lights">
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <span class="artwork-status bg-success">Available</span>
+                        <span class="artist-badge">By Artist Name</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">City Lights</h5>
+                        <p class="card-text text-muted">Oil • 30" × 40"</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="price-tag">$2,200</span>
+                            <button class="btn btn-sm btn-primary">
+                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Page navigation" class="mt-5">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class=" text-white py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Art Gallery</h5>
+                    <p>Discover beautiful paintings from talented artists around the world.</p>
+                    <div class="mt-3">
+                        <h6>Follow Us</h6>
+                        <div class="social-links">
+                            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-8 mb-4">
+                    <h5>Contact Us</h5>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2025 Art Gallery. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for form submission -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Here you would typically send the form data to your server
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle wishlist heart icon
+        document.querySelectorAll('.wishlist-btn').forEach(button => {
+            button.addEventListener('click', function (e) {
+                e.preventDefault();
+                const icon = this.querySelector('i');
+                if (icon.classList.contains('far')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

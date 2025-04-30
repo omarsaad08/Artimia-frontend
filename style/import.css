@@ -69,3 +69,16 @@ nav .auth :last-child {
 nav .auth :last-child:hover {
     background: transparent;
 }
+
+/* footer */
+footer {
+    background-color: var(--clr1);
+    color: var(--bg);
+}
+
+footer button {
+    background-color: var(--clr3) !important;
+    color: var(--bg);
+    border: none;
+    font-weight: bold;
+}

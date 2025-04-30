@@ -1,0 +1,89 @@
+body {
+    background-color: var(--bg);
+}
+
+.sidebar {
+    background-color: var(--clr1);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: var(--clr2);
+    color: white;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: none;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: var(--clr1);
+    border-color: var(--clr1);
+}
+
+.btn-outline-primary {
+    color: var(--clr1);
+    border-color: var(--clr1);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--clr1);
+    color: white;
+}
+
+.artwork-img {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.stats-card {
+    border-left: 4px solid var(--clr1);
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1600px) {
+    .sidebar {
+        width: 10%;
+    }
+}
