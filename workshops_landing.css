@@ -2,7 +2,6 @@
     margin:0;
     padding: 0;
     box-sizing: border-box; 
-    background-color: rgba(255, 228, 196, 0.529); 
   } 
 
   body {
@@ -12,12 +11,10 @@
     justify-content: center;
     align-items: flex-end; 
     font-family: Arial, sans-serif;
-   
+    background-color: rgba(255, 228, 196, 0.529); 
  
   }
-  h1, h2, h3, h4, h5, h6, p, div,img {
-    background: transparent;
-  }
+  
 
 .container-fluid {
     margin: 0;
@@ -148,7 +145,7 @@
     max-width:240px;
     height: 47%;
     position: absolute;
-    top: 20%;
+    top: 20%; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -167,3 +164,77 @@
     background: rgba(0, 0, 0, 0.4); /* optional dark overlay */
     z-index: 1;
   }
+
+  .faq{
+    position: relative;
+    margin-top: 200px;
+    width: 100%;
+    height:100% ;
+    gap: 5px;
+  }
+.questions{
+  gap: 2%;
+}
+  .question{
+    position: absolute;
+    width: 40%;
+    height: 10%;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(250, 235, 215, 0.636);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+  }
+  .speech-bubble {
+    display: none;
+    position: absolute;
+    right: 10%;
+    justify-content: center;
+    text-align: center;
+    width: 40%;
+    height: 40%;
+    cursor: pointer;
+    background-color: rgba(250, 235, 215, 0.636);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    }
+    
+    .question:hover{
+      width: 45%;
+      transform: translateY(10px);
+      transition: all 0.3s ease-in-out;      
+     }
+
+  .q1{
+      position: absolute;
+      top: 0%;
+      margin: 10px;
+ }
+  .q2{
+    position: absolute;
+    top: 15%;
+  }
+  .q3{
+    position: absolute;
+    top: 30%;
+  }
+  .q4{
+    position: absolute;
+    top: 45%;
+  }
+  .q5{
+    position: absolute;
+    top: 60%;
+  }
+.farid{
+  width: 20%;
+  min-width: 250px;
+  position: absolute;
+  right: 0px;
+  bottom: 30%;
+}
+
+.q1:hover ~ .bubble1,.q2:hover ~ .bubble2,.q3:hover ~ .bubble3,
+.q4:hover ~ .bubble4,.q5:hover ~ .bubble5{
+  display: block;
+}

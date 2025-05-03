@@ -2,50 +2,77 @@
     margin:0;
     padding: 0;
     box-sizing: border-box; 
-    background-color: rgba(255, 228, 196, 0.529); 
+    
   } 
 
   body {
     margin: 0; 
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: flex-end; 
     font-family: Arial, sans-serif;
-   
- 
-  }
-  h1, h2, h3, h4, h5, h6, p, div,img {
-    background: transparent;
+    background: linear-gradient(to bottom right, #f5d6ba, #4e2a1b);
+
+
+    
   }
 
+  .background-image {
+    background-image: url('/brand\ content/intro3.png'); /* use your actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    position: absolute; /* or relative, depending on context */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* or however tall you want the image */
+  
+    z-index: 0;
+  }
 
   /*<<<<<<<<<<<<<<<<<<<      first container      >>>>>>>>>>>>>>*/
-
-
-.container-fluid {
+  .container-fluid {
     margin: 0;
     padding: 0 20px;
     width: 100%;
   }
-/*navbar top*/
+
+  .top{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: transparent;
+  }
 .navbar-top{
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
     width: 100%;
-    height: 10vh;
     display: flex;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
-    background-color: rgba(255, 228, 196, 0.529);
+    justify-content: center space-between;
+    background-color: rgb(255, 228, 196);
 }
-/*navbar top*/
 .nav-item{
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
     background-color: transparent;
-    
 }
+.navbar{
+    z-index: 999;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(238, 222, 204, 0.51);
+    box-shadow: inset;
 
+}
+.navbar-toggler{
+    background-color: transparent;
+}
+.navbar-nav{
+    background-color: transparent;
+}
 
 .social-link i img{
     background-color: transparent;
@@ -63,15 +90,12 @@
 }
 
 .logo{
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
     background: transparent;
     width: 100%;
     height: 10vh;
     display: flex;
     align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    font-weight: 20px bold;
+    justify-content: center;
 }
 @media screen and (max-width:420px){
     .logo h3{
@@ -80,8 +104,10 @@
     }
 }
 
-.icons i img{
-
+.icons{
+    gap: 3px;
+    display: flex;
+    justify-content: center;
     margin-left: 10px;
     border-radius: 50%;
     cursor: pointer;
@@ -91,22 +117,10 @@
         width:20px;
     }
 }
-/*navbar top*/
 
 
-/*navbar content*/
-#navbar-color{
-    background-color: rgba(238, 224, 208, 0.447);
-}
 .navbar-nav{
-
-    background: transparent;
-    margin: auto;
-}
-
-.navbar{
-
-    background: transparent;
+    justify-content: center;
 }
 
 .nav-link{
@@ -118,38 +132,29 @@
 .nav-link:hover{
     color: rgb(184, 115, 75);
 }
-/*navbar content*/
-  /*<<<<<<<<<<<<<<<<<<    intro       >>>>>>>>>>>>>>>>>*/
-  
 
-  .main-content{
-    width: 100%;
-    height: 90vh;
-    background-image: url(/brand\ content/intro3.png);
-    background-color: antiquewhite;
-    background-size: cover;
-    background-position: 50%;
-}
 
 .fareed {
-    position: absolute;
-    bottom: 0%; 
+    position: relative;
     left: 50%;
+    top: 250px;
+    padding-bottom: 200px;
+    margin-bottom: 200px;
     transform: translateX(-50%);
     text-align: center;
-    z-index: 1000;
-    width: 50%; 
+    width: 100%; 
   }
 #farid1 {
     width: 30%; 
     height: auto;
     padding-bottom: 0%;
-    z-index: 1000;
+    z-index: 990;
  }
 #fspeech1 {
     position: absolute;
-    top: -100px; 
     left: 30%;
+    top: 10%;
+    width: 20%;
     transform: translateX(-50%);
     background: #ffe9c85a;
     border-radius: 40%;
@@ -166,8 +171,8 @@
         height: auto;
       }
     #farid1 {
-        width: 20%;
-        min-width: 30%;    
+        width: 50%;
+        min-width: 40%;    
     }
     #fspeech1 {
         right: 30%x; ;     
@@ -179,11 +184,12 @@
 
  /*<<<<<<<<<<<<<<<<          second container          >>>>>>>>>>>>>>>>>>*/
 .frist-container{
-    margin-inline: 0%;
-    margin-bottom: 30%;
-    inline-size: 0;
-    padding: 0px;
-    left:20%;   
+    position: relative;
+    top: 20%;
+    margin-bottom: 30px;
+    left: 20%;
+    width: 100%; /* or any actual width */
+    padding: 0;  
 }
 
 
