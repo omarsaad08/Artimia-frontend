@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <title>Document</title>
+    <title>monthly workshop</title>
 </head>
 <body>
 <div class="top">
     <!-- *****************      navbar top         *************-->
-        <div class="container-fluid">
             <div class="navbar-top">
                 <div class="social-link">
                     <i><img src="/icons/facebook.jpg" alt="" width =30px></i>
@@ -28,7 +27,6 @@
                     <i><img src="/icons/cart.png" width="20px"></i>
                 </div>
             </div>
-        </div>
     <!-- *****************      navbar top         ************* -->
 
 
@@ -77,6 +75,58 @@
     </div>   
 
 
+    <div class="fareed">
+        <img src="/brand content/farid.png" alt="" class="farid">
+        <p class="speech">hello there </p>
+    </div>
+
+    <form action="#" method="post" class="monthly-workshop-form">
+        <h2>Monthly Art Workshop Booking</h2>
+      
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+      
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      
+        <label for="workshopDate">Workshop Date:</label>
+        <input type="text" id="workshopDate" name="workshopDate" value="May 25, 2025" readonly>
+      
+        <label for="experience">Have you tried pouring art before?</label>
+        <select id="experience" name="experience" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      
+        <label for="goals">What would you like to get out of this workshop?</label>
+        <textarea id="goals" name="goals" rows="4" placeholder="Tell us more..."></textarea>
+      
+        <button type="submit">Reserve Your Spot</button>
+      </form>
+
+    <!-- footer-->
+    <footer id="footer" style="justify-content: center;">
+        <h1 class="text-center">atritmia</h1>
+        <p class="text-center">......</p>
+        <div class="icons">
+            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-facebook"></i>
+            <i class="bx bxl-instagram"></i>
+        </div>
+        <div class="copyright">
+            &copy; copyright <strong><span>artimia</span></strong>
+        </div>
+        <div class="cridet text-center">
+            designed by <a href="#">...............</a>
+        </div>
+     </footer>
+    <!-- footer-->
+
+    
     <script src="js/jquery-3.7.1.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>

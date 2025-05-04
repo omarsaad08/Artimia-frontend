@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="customized.css">
+    <link rel="stylesheet" href="privateWorkshop.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <title>customized painting</title>
+    <title>privat workshop</title>
 </head>
 <body >
 
-    <div class="background-image"></div>
-
+<div class="main-content">
     <div class="top">
         <!-- *****************      navbar top         *************-->
             <div class="container-fluid">
@@ -37,7 +36,6 @@
     
     
         <!-- *****************      main navbar         ************* -->
-         <div class="main-content">
             <nav class="navbar navbar-expand-md" id="navbar-color">
                 <div class="container" style="justify-content:center;">
                     <!-- toggler / collapisble button -->
@@ -54,118 +52,71 @@
                      </div>
                </div>
             </nav>
-         </div>
         <!-- *****************      main navbar         ************* -->
     </div>
 
     <!--*********************       form        ******************************-->
 
-    <div class="fareed">
+    
+
+    <div class="container form-container">
+        <h2 class="form-title">Book Your Private Workshop!</h2>
+        <form>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="preferredDate">Preferred Date</label>
+            <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="groupSize">Number of Participants</label>
+            <input type="number" class="form-control" id="groupSize" name="groupSize" min="1" max="10" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="experience">Have you tried pouring art before?</label>
+            <select class="form-control" id="experience" name="experience" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="goals">What would you like to get out of this workshop?</label>
+            <textarea class="form-control" id="goals" name="goals" rows="4" placeholder="Tell us more..."></textarea>
+          </div>
+      
+          <div class="form-group">
+            <label for="preferences">Any preferences or special requests?</label>
+            <textarea class="form-control" id="preferences" name="preferences" rows="3" placeholder="Optional..."></textarea>
+          </div>
+      
+          <button type="submit" class="btn">Book Now</button>
+        </form>
+      </div>
+
+
+      <div class="fareed">
         <img src="/brand content/farid.png" alt="" class="farid">
         <p class="speech">hello there </p>
     </div>
 
-    <!--       1#       -->
-    <div class="container form-container">
-        <h2 class="form-title">Custom Painting Order Form</h2>
-        <form>
-    
-          <!-- **************   Painting Info   ****************     -->
-          <div class="form-group">
-            <label for="theme">What would you like your painting to be about?</label>
-            <textarea class="form-control" id="theme" rows="2" placeholder="E.g. nature, memory, colors..."></textarea>
-          </div>
-    
-          <div class="form-group">
-            <label for="colors">Preferred color palette (optional)</label>
-            <input type="text" class="form-control" id="colors" placeholder="E.g. warm tones, beige and gold...">
-          </div>
-    
-          <div class="form-group">
-            <label for="style">Preferred painting style</label>
-            <select class="form-control" id="style">
-              <option selected>Choose one</option>
-              <option>Abstract</option>
-              <option>Minimalist</option>
-              <option>Realistic</option>
-              <option>Pouring Art</option>
-              <option>I'm not sure</option>
-            </select>
-          </div>
-    
-          <div class="form-group">
-            <label for="size">Preferred size</label>
-            <input type="text" class="form-control" id="size" placeholder="E.g. 50x70 cm">
-          </div>
-    
-          <!-- Reference -->
-          <div class="form-group">
-            <label for="reference">Upload reference image (optional)</label>
-            <input type="file" class="form-control-file" id="reference" accept="image/*">
-          </div>
-    
-          <div class="form-group">
-            <label for="notes">Additional notes</label>
-            <textarea class="form-control" id="notes" rows="3"></textarea>
-          </div>
-    
-          <!-- Contact Info -->
-          <hr class="my-4">
-          <h5>Contact Details</h5>
-    
-          <div class="form-group">
-            <label for="name">Your name</label>
-            <input type="text" class="form-control" id="name" required>
-          </div>
-    
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" required>
-          </div>
-    
-          <div class="form-group">
-            <label for="phone">Phone number</label>
-            <input type="tel" class="form-control" id="phone" placeholder="E.g. WhatsApp number">
-          </div>
-    
-          <div class="form-group">
-            <label for="contact-method">Preferred contact method</label>
-            <select class="form-control" id="contact-method">
-              <option selected>Choose one</option>
-              <option>WhatsApp</option>
-              <option>Phone call</option>
-              <option>Email</option>
-              <option>Instagram</option>
-            </select>
-          </div>
-    
-          <div class="form-group">
-            <label for="contact-date">Best date to contact</label>
-            <input type="date" class="form-control" id="contact-date">
-          </div>
-    
-          <div class="form-group">
-            <label for="contact-time">Best time to contact</label>
-            <select class="form-control" id="contact-time">
-              <option selected>Choose one</option>
-              <option>Morning (9am–12pm)</option>
-              <option>Afternoon (12pm–5pm)</option>
-              <option>Evening (5pm–9pm)</option>
-              <option>Other</option>
-            </select>
-          </div>
-    
-          <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" id="agree" required>
-            <label class="form-check-label" for="agree">
-              I agree to the terms and conditions
-            </label>
-          </div>
-    
-          <button type="submit" class="btn btn-dark btn-block">Submit Order</button>
-        </form>
-      </div>
-
+</div>
 
     <!-- footer-->
     <footer id="footer" style="justify-content: center;">
