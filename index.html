@@ -31,26 +31,32 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="/screens/customer/allPaintings.html">Paintings</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Workshops</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/screens/customer/cart.html">Cart</a>
-                    </li>
                 </ul>
-                <div class="auth d-flex">
+                <div id="guestButtons" class="auth d-flex">
                     <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
                     <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
+                </div>
+                <div id="userSection" class="d-none">
+                    <div class="dropdown">
+                        <button class="btn btn-success dropdown-toggle" type="button" id="userDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hello, <span id="usernameDisplay">User</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="/screens/profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
-
+    <!-- Rest of your HTML remains the same -->
     <!-- Landing -->
     <section class="content-section">
         <div class="container">
@@ -177,6 +183,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+
+    <script src="/script/nav.js"></script>
 </body>
 
 </html>
