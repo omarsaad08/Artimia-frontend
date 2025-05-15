@@ -36,6 +36,11 @@
                     <label for="email">Email</label>
                 </div>
                 <div class="form-floating mb-3">
+                    <input type="phoneNumber" class="form-control" name="phoneNumber" id="phoneNumber"
+                        placeholder="Phone Number" required>
+                    <label for="phoneNumber">Phone Number</label>
+                </div>
+                <div class="form-floating mb-3">
                     <input type="password" class="form-control" name="password" id="password" placeholder="Password"
                         required>
                     <label for="password">Password</label>
@@ -49,12 +54,14 @@
                         <option value="customer">Customer</option>
                     </select>
                 </div>
-                <a href="/screens/seller/home.html" class="btn btn-light w-100 mb-3">Sign up</a>
+                <!-- <a href="/screens/seller/home.html" class="btn btn-light w-100 mb-3">Sign up</a> -->
+                <input type="submit" id="signup-button" class="btn btn-light w-100 mb-3 ">Sign up</input>
                 <p>have an account? <a href="/screens/auth/signin.html" class="text-white fw-bold">Login</a></p>
             </form>
-
+            <p id="error-message"></p>
         </div>
     </div>
+    <script src="/script/signup.js"></script>
 </body>
 
 </html>

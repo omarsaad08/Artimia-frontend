@@ -37,30 +37,55 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#workshopModal">
-                            <i class="fas fa-calendar-alt"></i> Add Workshop
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="fas fa-palette"></i> My Paintings
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-chalkboard-teacher"></i> My Workshops
-                        </a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-cog"></i> Settings
-                        </a>
-                    </li> -->
                 </ul>
             </div>
 
             <!-- Main Content -->
             <div class="col-md-9 col-lg-10 main-content">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">
+                            <img src="/assets/Artimia.png" alt="" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page"
+                                        href="/screens/customer/allPaintings.html">Paintings</a>
+                                </li>
+                            </ul>
+                            <div id="guestButtons" class="auth d-flex">
+                                <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
+                                <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
+                            </div>
+                            <div id="userSection" class="d-none">
+                                <div class="dropdown">
+                                    <button class="btn btn-success dropdown-toggle" type="button" id="userDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Hello, <span id="usernameDisplay">User</span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                                        <li><a class="dropdown-item" href="/screens/profile.html">Profile</a></li>
+                                        <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2>Dashboard Overview</h2>
                     <div class="dropdown">
@@ -77,145 +102,21 @@
 
                 <!-- Stats Cards -->
                 <div class="row mb-4">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="card stats-card">
                             <div class="card-body">
-                                <h5 class="card-title">Total Paintings</h5>
-                                <h2 class="card-text">24</h2>
-                                <p class="text-muted">5 new this month</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card stats-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Workshops</h5>
-                                <h2 class="card-text">8</h2>
-                                <p class="text-muted">3 upcoming</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card stats-card">
-                            <div class="card-body">
-                                <h5 class="card-title">Total Sales</h5>
-                                <h2 class="card-text">$12,450</h2>
-                                <p class="text-muted">$2,300 this month</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent Paintings -->
-                <div class="card mb-4">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Recent Paintings</h5>
-                        <a href="/screens/seller/allPaintings.html" class="btn btn-sm">View All</a>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100">
-                                    <img src="/assets/gallery1.jpg" class="card-img-top artwork-img" alt="Painting 1">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Mountain Sunset</h5>
-                                        <p class="card-text">Oil on canvas • 24" × 36"</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="badge bg-success">Available</span>
-                                            <strong>$1,200</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100">
-                                    <img src="/assets/gallery2.jpg" class="card-img-top artwork-img" alt="Painting 2">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Ocean Waves</h5>
-                                        <p class="card-text">Acrylic • 18" × 24"</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="badge bg-success">Available</span>
-                                            <strong>$850</strong>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-4">
-                                <div class="card h-100">
-                                    <img src="/assets/gallery3.jpg" class="card-img-top artwork-img" alt="Painting 3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Urban Life</h5>
-                                        <p class="card-text">Watercolor • 12" × 16"</p>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <span class="badge bg-secondary">Sold</span>
-                                            <strong>$600</strong>
-                                        </div>
-                                    </div>
+                                <div class="my-4">
+                                    <h4>Total Paintings: <span id="paintingCount">0</span></h4>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Upcoming Workshops -->
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Upcoming Workshops</h5>
-                        <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Title</th>
-                                        <th>Type</th>
-                                        <th>Date</th>
-                                        <th>Price</th>
-                                        <th>Participants</th>
-                                        <th>Status</th>
-                                        <th>Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Oil Painting Basics</td>
-                                        <td><span class="badge bg-info">Online</span></td>
-                                        <td>June 15, 2023</td>
-                                        <td>$120</td>
-                                        <td>12/20</td>
-                                        <td><span class="badge bg-success">Active</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary">Edit</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Watercolor Techniques</td>
-                                        <td><span class="badge bg-warning text-dark">In-person</span></td>
-                                        <td>June 22, 2023</td>
-                                        <td>$150</td>
-                                        <td>8/15</td>
-                                        <td><span class="badge bg-success">Active</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary">Edit</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Abstract Art Masterclass</td>
-                                        <td><span class="badge bg-info">Online</span></td>
-                                        <td>July 5, 2023</td>
-                                        <td>$200</td>
-                                        <td>5/25</td>
-                                        <td><span class="badge bg-secondary">Upcoming</span></td>
-                                        <td>
-                                            <button class="btn btn-sm btn-outline-primary">Edit</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                <div class="row" id="productContainer">
+                    <!-- Products will be injected here -->
                 </div>
+
             </div>
         </div>
     </div>
@@ -229,7 +130,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="productUploadForm" enctype="multipart/form-data">
                         <div class="mb-3">
                             <label for="paintingImage" class="form-label">Painting Image</label>
                             <input class="form-control" type="file" id="paintingImage" accept="image/*">
@@ -246,21 +147,25 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="paintingMedium" class="form-label">Medium</label>
-                                <select class="form-select" id="paintingMedium">
-                                    <option selected disabled>Select medium</option>
-                                    <option>Oil</option>
-                                    <option>Acrylic</option>
-                                    <option>Watercolor</option>
-                                    <option>Mixed Media</option>
-                                    <option>Digital</option>
+                            <div class="col-md-3 mb-3">
+                                <label for="paintingSize" class="form-label">Size</label>
+                                <select class="form-select" id="paintingSize">
+                                    <option selected>SMALL</option>
+                                    <option>MEDIUM</option>
+                                    <option>LARGE</option>
                                 </select>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="paintingSize" class="form-label">Size</label>
-                                <input type="text" class="form-control" id="paintingSize" placeholder="e.g., 24\" ×
-                                    36\"">
+                            <div class="col-md-3 mb-3">
+                                <label for="paintingQuantity" class="form-label">quantity</label>
+                                <input type="number" class="form-control" id="paintingQuantity" placeholder="24">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="paintingLength" class="form-label">length (cm)</label>
+                                <input type="number" class="form-control" id="paintingLength" placeholder="24">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="paintingWidth" class="form-label">width (cm)</label>
+                                <input type="number" class="form-control" id="paintingWidth" placeholder="36">
                             </div>
                         </div>
                         <div class="mb-3">
@@ -276,7 +181,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn ">Upload Painting</button>
+                    <button type="submit" class="btn btn-primary" id="uploadButton">Upload Painting</button>
                 </div>
             </div>
         </div>
@@ -348,16 +253,16 @@
                         </div>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn ">Create Workshop</button>
-                </div>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="/script/uploadPainting.js"></script>
+    <script src="/script/nav.js"></script>
+    <script src="/script/home.js"></script>
 </body>
 
 </html>

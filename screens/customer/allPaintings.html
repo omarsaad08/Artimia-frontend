@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Gallery - Browse Paintings</title>
-
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet" />
@@ -42,19 +41,34 @@
                         <a class="nav-link" aria-current="page" href="#">Workshops</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/screens/customer/cart.html">Cart</a>
+                        <a class="nav-link" aria-current="page" href="/screens/customer/orders.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/screens/customer/cart.html">Cart <span
+                                id="cartCounter" class="badge bg-danger">0</span></a>
                     </li>
                 </ul>
-                <div class="auth d-flex">
+                <div id="guestButtons" class="auth d-flex">
                     <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
                     <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
+                </div>
+                <div id="userSection" class="d-none">
+                    <div class="dropdown">
+                        <button class="btn btn-success dropdown-toggle" type="button" id="userDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hello, <span id="usernameDisplay">User</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="/screens/profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
 
     <div class="container">
-
         <!-- Page Header -->
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h1>Browse Paintings</h1>
@@ -74,263 +88,64 @@
         <div class="filter-section">
             <div class="row">
                 <div class="col-md-3 mb-3">
-                    <label for="categoryFilter" class="form-label">Category</label>
-                    <select class="form-select" id="categoryFilter">
-                        <option selected>All Categories</option>
-                        <option>Landscape</option>
-                        <option>Portrait</option>
-                        <option>Abstract</option>
-                        <option>Still Life</option>
-                        <option>Contemporary</option>
-                    </select>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="mediumFilter" class="form-label">Medium</label>
-                    <select class="form-select" id="mediumFilter">
-                        <option selected>All Mediums</option>
-                        <option>Oil</option>
-                        <option>Acrylic</option>
-                        <option>Watercolor</option>
-                        <option>Mixed Media</option>
-                        <option>Digital</option>
+                    <label for="categoryFilter" class="form-label">Style</label>
+                    <select class="form-select" id="styleFilter">
+                        <option value="" selected>All Styles</option>
+                        <!-- Will be populated by JavaScript -->
                     </select>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="priceFilter" class="form-label">Price Range</label>
                     <select class="form-select" id="priceFilter">
-                        <option selected>All Prices</option>
-                        <option>Under $500</option>
-                        <option>$500 - $1,000</option>
-                        <option>$1,000 - $2,500</option>
-                        <option>Over $2,500</option>
+                        <option value="" selected>All Prices</option>
+                        <option value="0-500">Under $500</option>
+                        <option value="500-1000">$500 - $1,000</option>
+                        <option value="1000-2500">$1,000 - $2,500</option>
+                        <option value="2500-999999">Over $2,500</option>
                     </select>
                 </div>
                 <div class="col-md-3 mb-3">
                     <label for="sortBy" class="form-label">Sort By</label>
                     <select class="form-select" id="sortBy">
-                        <option selected>Featured</option>
-                        <option>Newest</option>
-                        <option>Price: Low to High</option>
-                        <option>Price: High to Low</option>
-                        <option>Most Popular</option>
+                        <option value="timesBought" selected>Most Popular</option>
+                        <option value="Id">Newest</option>
+                        <option value="Price-asc">Price: Low to High</option>
+                        <option value="Price-desc">Price: High to Low</option>
                     </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="search" class="form-label">Search</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="searchInput" placeholder="Search paintings...">
+                        <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Paintings Grid -->
-        <div class="row">
-            <!-- Painting 1 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <div class="card artwork-card">
-                    <div class="position-relative">
-                        <img src="/assets/gallery1.jpg" class="artwork-img" alt="Mountain Sunset">
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                        <span class="artwork-status bg-success">Available</span>
-                        <span class="artist-badge">By Artist Name</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Mountain Sunset</h5>
-                        <p class="card-text text-muted">Oil on canvas • 24" × 36"</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price-tag">$1,200</span>
-                            <button class="btn btn-sm btn-primary">
-                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
-                            </button>
-                        </div>
-                    </div>
+        <div class="row" id="paintingsContainer">
+            <!-- Paintings will be loaded here dynamically -->
+            <div class="col-12 text-center py-5">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
-            </div>
-
-            <!-- Painting 2 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <div class="card artwork-card">
-                    <div class="position-relative">
-                        <img src="/assets/gallery2.jpg" class="artwork-img" alt="Ocean Waves">
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                        <span class="artwork-status bg-secondary">Sold</span>
-                        <span class="artist-badge">By Artist Name</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Ocean Waves</h5>
-                        <p class="card-text text-muted">Acrylic • 18" × 24"</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price-tag">$850</span>
-                            <button class="btn btn-sm btn-outline-secondary" disabled>
-                                Sold Out
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Painting 3 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <div class="card artwork-card">
-                    <div class="position-relative">
-                        <img src="/assets/gallery3.jpg" class="artwork-img" alt="Urban Life">
-                        <button class="wishlist-btn">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <span class="artwork-status bg-success">Available</span>
-                        <span class="artist-badge">By Artist Name</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Urban Life</h5>
-                        <p class="card-text text-muted">Watercolor • 12" × 16"</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price-tag">$600</span>
-                            <button class="btn btn-sm btn-primary">
-                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Painting 4 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <div class="card artwork-card">
-                    <div class="position-relative">
-                        <img src="/assets/gallery1.jpg" class="artwork-img" alt="Forest Path">
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                        <span class="artwork-status bg-success">Available</span>
-                        <span class="artist-badge">By Artist Name</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Forest Path</h5>
-                        <p class="card-text text-muted">Oil • 20" × 30"</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price-tag">$950</span>
-                            <button class="btn btn-sm btn-primary">
-                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Painting 5 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <div class="card artwork-card">
-                    <div class="position-relative">
-                        <img src="/assets/gallery2.jpg" class="artwork-img" alt="Abstract Thoughts">
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                        <span class="artwork-status bg-warning text-dark">Only 1 Left</span>
-                        <span class="artist-badge">By Artist Name</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Abstract Thoughts</h5>
-                        <p class="card-text text-muted">Mixed Media • 24" × 24"</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price-tag">$1,500</span>
-                            <button class="btn btn-sm btn-primary">
-                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Painting 6 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <div class="card artwork-card">
-                    <div class="position-relative">
-                        <img src="/assets/gallery3.jpg" class="artwork-img" alt="Desert Mirage">
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                        <span class="artwork-status bg-success">Available</span>
-                        <span class="artist-badge">By Artist Name</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Desert Mirage</h5>
-                        <p class="card-text text-muted">Acrylic • 16" × 20"</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price-tag">$750</span>
-                            <button class="btn btn-sm btn-primary">
-                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Painting 7 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <div class="card artwork-card">
-                    <div class="position-relative">
-                        <img src="/assets/gallery1.jpg" class="artwork-img" alt="Coastal Breeze">
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                        <span class="artwork-status bg-success">Available</span>
-                        <span class="artist-badge">By Artist Name</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Coastal Breeze</h5>
-                        <p class="card-text text-muted">Watercolor • 14" × 18"</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price-tag">$550</span>
-                            <button class="btn btn-sm btn-primary">
-                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Painting 8 -->
-            <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <div class="card artwork-card">
-                    <div class="position-relative">
-                        <img src="/assets/gallery2.jpg" class="artwork-img" alt="City Lights">
-                        <button class="wishlist-btn">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                        <span class="artwork-status bg-success">Available</span>
-                        <span class="artist-badge">By Artist Name</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">City Lights</h5>
-                        <p class="card-text text-muted">Oil • 30" × 40"</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="price-tag">$2,200</span>
-                            <button class="btn btn-sm btn-primary">
-                                <i class="fas fa-shopping-cart me-1"></i> Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <p class="mt-2">Loading paintings...</p>
             </div>
         </div>
 
         <!-- Pagination -->
         <nav aria-label="Page navigation" class="mt-5">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                    <a class="page-link" href="#" tabindex="-1">Previous</a>
-                </li>
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
+            <ul class="pagination justify-content-center" id="pagination">
+                <!-- Pagination will be loaded here dynamically -->
             </ul>
         </nav>
     </div>
 
     <!-- Footer -->
-    <footer class=" text-white py-5 mt-5">
+    <footer class="text-white py-5 mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-4">
@@ -377,34 +192,10 @@
         </div>
     </footer>
 
-    <!-- JavaScript for form submission -->
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            // Here you would typically send the form data to your server
-            alert('Thank you for your message! I will get back to you soon.');
-            this.reset();
-        });
-    </script>
-
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Toggle wishlist heart icon
-        document.querySelectorAll('.wishlist-btn').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.preventDefault();
-                const icon = this.querySelector('i');
-                if (icon.classList.contains('far')) {
-                    icon.classList.remove('far');
-                    icon.classList.add('fas');
-                } else {
-                    icon.classList.remove('fas');
-                    icon.classList.add('far');
-                }
-            });
-        });
-    </script>
+    <script src="/script/nav.js"></script>
+    <script src="/script/allPaintings.js"></script>
 </body>
 
 </html>

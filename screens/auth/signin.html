@@ -20,7 +20,7 @@
     <div class="container d-flex justify-content-center align-items-center min-vh-100">
         <div class="login-box text-white text-center">
             <h2 class="mb-4">Login</h2>
-            <form action="" method="POST">
+            <form id="loginForm">
                 <div class="form-floating mb-3">
                     <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                     <label for="email">Email</label>
@@ -30,13 +30,16 @@
                         required>
                     <label for="password">Password</label>
                 </div>
-                <a href="/screens/seller/home.html" class="btn btn-light w-100 mb-3">Login</a>
+                <button type="submit" class="btn btn-light w-100 mb-3" id="loginButton">Login</button>
+                <div id="errorMessage" class="alert alert-danger d-none mb-3"></div>
                 <p>Don't have an account? <a href="/screens/auth/signup.html" class="text-white fw-bold">Register</a>
                 </p>
             </form>
-
         </div>
     </div>
+
+    <script src="/script/login.js">
+    </script>
 </body>
 
 </html>

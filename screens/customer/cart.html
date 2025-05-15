@@ -12,7 +12,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="/style/normalize.css" />
     <link rel="stylesheet" href="/style/import.css" />
     <link rel="stylesheet" href="/style/cart.css" />
@@ -42,12 +41,25 @@
                         <a class="nav-link" aria-current="page" href="#">Workshops</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/screens/customer/cart.html">Cart</a>
+                        <a class="nav-link" aria-current="page" href="/screens/customer/cart.html">Cart <span
+                                id="cartCounter" class="badge bg-danger">0</span></a>
                     </li>
                 </ul>
-                <div class="auth d-flex">
+                <div id="guestButtons" class="auth d-flex">
                     <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
                     <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
+                </div>
+                <div id="userSection" class="d-none">
+                    <div class="dropdown">
+                        <button class="btn btn-success dropdown-toggle" type="button" id="userDropdown"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Hello, <span id="usernameDisplay">User</span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="/screens/profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,63 +70,19 @@
             <div class="col-lg-8">
                 <h2 class="mb-4">Your Shopping Cart</h2>
 
-                <!-- Cart Items -->
-                <div class="cart-items">
-                    <!-- Cart Item 1 -->
-                    <div class="cart-item p-3 d-flex">
-                        <img src="/assets/gallery1.jpg" class="cart-item-img me-3" alt="Mountain Sunset">
-                        <div class="flex-grow-1">
-                            <div class="d-flex justify-content-between">
-                                <h5>Mountain Sunset</h5>
-                                <button class="btn btn-link text-danger p-0">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                            <p class="text-muted mb-2">Oil on canvas • 24" × 36"</p>
-                            <p class="text-muted mb-2">Artist: John Doe</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center">
-                                    <button class="quantity-btn me-2">-</button>
-                                    <input type="number" class="quantity-input me-2" value="1" min="1">
-                                    <button class="quantity-btn">+</button>
-                                </div>
-                                <h5 class="mb-0">$1,200</h5>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Cart Items Container (Will be populated by JavaScript) -->
+                <div class="cart-items" id="cartItemsContainer">
+                    <!-- Dynamic content will go here -->
+                </div>
 
-                    <!-- Cart Item 2 -->
-                    <div class="cart-item p-3 d-flex">
-                        <img src="/assets/gallery2.jpg" class="cart-item-img me-3" alt="Ocean Waves">
-                        <div class="flex-grow-1">
-                            <div class="d-flex justify-content-between">
-                                <h5>Ocean Waves</h5>
-                                <button class="btn btn-link text-danger p-0">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                            <p class="text-muted mb-2">Acrylic • 18" × 24"</p>
-                            <p class="text-muted mb-2">Artist: Jane Smith</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="d-flex align-items-center">
-                                    <button class="quantity-btn me-2">-</button>
-                                    <input type="number" class="quantity-input me-2" value="1" min="1">
-                                    <button class="quantity-btn">+</button>
-                                </div>
-                                <h5 class="mb-0">$850</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Continue Shopping -->
-                    <div class="d-flex justify-content-between mt-4">
-                        <a href="/screens/customer/allPaintings.html" class="btn btn-outline-primary">
-                            <i class="fas fa-arrow-left me-2"></i>Continue Shopping
-                        </a>
-                        <button class="btn btn-outline-danger">
-                            <i class="fas fa-trash me-2"></i>Clear Cart
-                        </button>
-                    </div>
+                <!-- Cart Actions -->
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="/screens/customer/allPaintings.html" class="btn btn-outline-primary">
+                        <i class="fas fa-arrow-left me-2"></i>Continue Shopping
+                    </a>
+                    <button class="btn btn-outline-danger" id="clearCartBtn">
+                        <i class="fas fa-trash me-2"></i>Clear Cart
+                    </button>
                 </div>
             </div>
 
@@ -124,22 +92,22 @@
                     <h4 class="mb-4">Order Summary</h4>
 
                     <div class="d-flex justify-content-between mb-2">
-                        <span>Subtotal (2 items)</span>
-                        <span>$2,050.00</span>
+                        <span>Subtotal (<span id="itemCount">0</span> items)</span>
+                        <span>$<span id="subtotal">0.00</span></span>
                     </div>
 
                     <div class="d-flex justify-content-between mb-2">
                         <span>Shipping</span>
-                        <span>$50.00</span>
+                        <span>$<span id="shipping">50.00</span></span>
                     </div>
                     <hr>
 
                     <div class="d-flex justify-content-between mb-4">
                         <h5>Total</h5>
-                        <h5>$2,264.00</h5>
+                        <h5>$<span id="total">0.00</span></h5>
                     </div>
 
-                    <button class="btn btn-checkout w-100 mb-3">
+                    <button class="btn btn-checkout w-100 mb-3" id="checkoutBtn">
                         Proceed to Checkout
                     </button>
 
@@ -149,7 +117,6 @@
                     <p class="text-muted small">
                         <i class="fas fa-undo me-2"></i>Easy returns
                     </p>
-
                 </div>
             </div>
         </div>
@@ -157,47 +124,9 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Quantity adjustment functionality
-        document.querySelectorAll('.quantity-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const input = this.parentElement.querySelector('.quantity-input');
-                let value = parseInt(input.value);
-
-                if (this.textContent === '+' && value < 10) {
-                    input.value = value + 1;
-                } else if (this.textContent === '-' && value > 1) {
-                    input.value = value - 1;
-                }
-
-                // In a real app, you would update the cart total here
-            });
-        });
-
-        // Remove item functionality
-        document.querySelectorAll('.btn-link.text-danger').forEach(btn => {
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
-                if (confirm('Remove this item from your cart?')) {
-                    this.closest('.cart-item').remove();
-                    // In a real app, you would update the cart total here
-                }
-            });
-        });
-
-        // Clear cart functionality
-        document.querySelector('.btn-outline-danger').addEventListener('click', function () {
-            if (confirm('Clear your entire cart?')) {
-                document.querySelector('.cart-items').innerHTML = `
-                    <div class="empty-cart">
-                        <i class="fas fa-shopping-cart fa-3x mb-3 text-muted"></i>
-                        <h4 class="mb-3">Your cart is empty</h4>
-                        <a href="/screens/customer/allpaintings.html" class="btn btn-primary">Continue Shopping</a>
-                    </div>
-                `;
-            }
-        });
-    </script>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script type='module' src="/script/cart.js"></script>
+    <script src="/script/nav.js"></script>
 </body>
 
 </html>
