@@ -19,52 +19,56 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="/assets/Artimia.png" alt="" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/screens/customer/allPaintings.html">Paintings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Workshops</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/screens/customer/cart.html">Cart <span
-                                id="cartCounter" class="badge bg-danger">0</span></a>
-                    </li>
-                </ul>
+    <div class="top">
+        <!-- *****************      navbar top         *************-->
+                <div class="navbar-top">
+                    <div class="social-link">
+                        <i><img src="/icons/facebook.jpg" alt="" style="border-radius: 50%;" width =30px></i>
+                        <i><img src="/icons/insta.jpg" alt="" style="border-radius: 50%;" width =30px></i>
+                        <i><img src="/icons/sociall.jpg" alt="" style="border-radius: 50%;" width =30px></i>
+                    </div>
+                    
+                    <div class="logo"><ul class="navbar-nav">
+                        <img src="/brand content/logo.jpg" alt="" width="50px" style="border-radius: 50%;">
+                        </ul>
+                    </div>
+                    
                 <div id="guestButtons" class="auth d-flex">
                     <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
                     <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
                 </div>
-                <div id="userSection" class="d-none">
-                    <div class="dropdown">
-                        <button class="btn btn-success dropdown-toggle" type="button" id="userDropdown"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Hello, <span id="usernameDisplay">User</span>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" href="/screens/profile.html">Profile</a></li>
-                            <li><a class="dropdown-item" href="#" id="logoutButton">Logout</a></li>
+                    <div class="icons">
+                        <i><img src="/icons/search.jpg "style="border-radius: 50%;"  width="20px"></i>
+                        <i><img src="/icons/heeart.jpeg" style="border-radius: 50%;" width="20px"></i>
+                        <i><img src="/icons/cart.png" style="border-radius: 50%;" width="20px"></i>
+                    </div>
+                </div>
+        <!-- *****************      navbar top         ************* -->
+
+
+
+        <!-- *****************      main navbar         ************* -->
+        <div class="main-content">
+            <nav class="navbar navbar-expand-md" id="navbar-color">
+                <div class="container" style="justify-content:center;">
+                    <!-- toggler / collapisble button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#collapsibleNavbar">
+                        <span><i><img src="/brand content/logo1.jpg" width="30px"></i></span>
+                    </button>
+                    <!--navbar links-->
+                    <div class="collapse navbar-collapse" style="justify-content: center;" id="collapsibleNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="/workshops_landing.html" class="nav-link">workshops</a></li>
+                            <li class="nav-item"><a href="/gallery.html" class="nav-link">gallery</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link">customized</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
         </div>
-    </nav>
-
+        <!-- *****************      main navbar         ************* -->
+    </div>
     <div class="container py-4">
         <div class="row">
             <div class="col-lg-8">

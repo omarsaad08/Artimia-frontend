@@ -1,6 +1,11 @@
 /* landing */
+
 .content-section {
     padding: 60px 0;
+    background-image: url('/brand content/intro3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .section-image {
@@ -12,6 +17,9 @@
 
 .section-content {
     padding: 20px;
+    color: rgb(81, 43, 19);
+    -webkit-text-stroke: 1px rgb(255, 229, 183);
+    font-size: 48px;  
 }
 
 .section-content a {
@@ -28,15 +36,15 @@
 
 .img-container {
     display: flex;
+    width: 30%;
     justify-content: center;
     align-items: center;
-    border: 5px solid var(--clr1);
     padding: 12px;
-    border-radius: 20px;
 }
 
 @media (max-width: 767.98px) {
     .section-content {
+        width: 20%;
         text-align: center;
         padding-top: 30px;
     }
