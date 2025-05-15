@@ -1,4 +1,3 @@
-
 // Global variables
 let currentPage = 1;
 const itemsPerPage = 8;
@@ -19,7 +18,13 @@ const cartCounter = document.getElementById('cartCounter');
 // Fetch paintings from the API
 async function fetchPaintings() {
     try {
-        const response = await fetch('http://localhost:8080/api/products', { method: 'GET' });
+        const response = await fetch('http://localhost:8080/api/products', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem('jwtToken')
+            }
+        });
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -137,11 +142,17 @@ function renderPaintings() {
         return;
     }
 
-    paintingsContainer.innerHTML = paintingsToShow.map(painting => `
+    paintingsContainer.innerHTML = paintingsToShow.map(painting => {
+        // Extract image filename from the URL
+        const imageFilename = painting.imageUrl.split('/').pop();
+        // Create image URL with token
+        const imageUrl = `http://localhost:8080/api/products/image/${imageFilename}`;
+
+        return `
                 <div class="col-md-6 col-lg-4 col-xl-3 mb-4">
                     <div class="card artwork-card h-100">
                         <div class="position-relative">
-                            <img src="http://localhost:8080/api/products/image/${painting.imageUrl.split('/')[2]}" class="artwork-img" alt="${painting.productName}">
+                            <img src="${imageUrl}" class="artwork-img" alt="${painting.productName}">
                             <button class="wishlist-btn" data-id="${painting.Id}">
                                 <i class="far fa-heart"></i>
                             </button>
@@ -159,7 +170,8 @@ function renderPaintings() {
                         </div>
                     </div>
                 </div>
-            `).join('');
+            `;
+    }).join('');
 
     // Add event listeners to the newly created elements
     addEventListeners();

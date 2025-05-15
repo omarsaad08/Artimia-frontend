@@ -1,4 +1,4 @@
-
+// import axios from 'https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js';
 // Cart Management Functions
 function getCart() {
     return JSON.parse(sessionStorage.getItem('cart')) || [];
@@ -121,20 +121,72 @@ document.getElementById('clearCartBtn').addEventListener('click', function () {
 });
 
 // Checkout Button
-document.getElementById('checkoutBtn').addEventListener('click', function () {
+document.getElementById('checkoutBtn').addEventListener('click', async function () {
+
     if (getCart().length === 0) {
         alert('Your cart is empty!');
         return;
     }
-    alert('Proceeding to checkout!');
-    const response = fetch('http://localhost:8080/api/orders', {
-        method: 'POST',
-        body: JSON.stringify(getCart())
-    });
-    if (response.ok) {
-        alert('Order placed successfully!');
-        updateCart([]);
+    try {
+        const userId = localStorage.getItem('userId');
+        const addressResponse = await fetch(`http://localhost:8080/api/addresses/user/${userId}`,
+            {
+                method: "GET",
+
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('jwtToken')
+                }
+            }
+        );
+        console.log(addressResponse);
+        if (addressResponse.status == 404) {
+            window.location.href = '/screens/customer/address.html';
+        } else {
+            const cart = getCart();
+            async function updateCartItems(cart) {
+                for (const item of cart) {
+                    const response = await fetch(`http://localhost:8080/api/product-sizes/${item.id}`, {
+                        method: 'GET',
+
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + localStorage.getItem('jwtToken')
+                        }
+                    });
+                    const data = await response.json();
+                    item.productSizeId = data[0].sizeId;
+                    item.productId = item.id;
+                    item.id = null;
+                }
+                return cart; // Return the updated cart
+            }
+
+            // Usage
+            const updatedCart = await updateCartItems(cart);
+
+            console.log(updatedCart);
+            const json = JSON.stringify(updatedCart);
+            console.log(json);
+            alert('Proceeding to checkout!');
+            const response = await axios.post(`http://localhost:8080/api/orders/checkout/${userId}`, json, {
+
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('jwtToken')
+                }
+            });
+            console.log(response);
+            if (response.status == 200) {
+                alert('Order placed successfully!');
+                updateCart([]);
+            }
+        }
+    } catch (e) {
+        alert(`error: ${e}`);
+        console.log(`error: ${e}`);
     }
+    // console.log(getCart());
 });
 
 // Initialize on page load
@@ -142,3 +194,29 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCartCounter();
     renderCart();
 });
+/*
+[
+{
+    "id": 6,
+    "name": "testkjasdlf;kjas",
+    "price": 10,
+    "imageUrl": "/uploads/c0909298-31d3-435f-bd8a-486098bf729c_gallery1.png.jpg",
+    "quantity": 1
+},
+{
+    "id": 7,
+    "name": "testkjasdlf;kjas",
+    "price": 10,
+    "imageUrl": "/uploads/c0909298-31d3-435f-bd8a-486098bf729c_gallery1.png.jpg",
+    "quantity": 1
+},
+{
+    "id": 8,
+    "name": "testkjasdlf;kjas",
+    "price": 10,
+    "imageUrl": "/uploads/c0909298-31d3-435f-bd8a-486098bf729c_gallery1.png.jpg",
+    "quantity": 1
+}
+    
+]
+*/

@@ -8,27 +8,19 @@ document.getElementById('uploadButton').addEventListener('click', async function
         uploadButton.disabled = true;
         uploadButton.textContent = 'Uploading...';
 
-        const formData = new FormData();
         const imageFile = document.getElementById('paintingImage').files[0];
 
         if (!imageFile) {
             throw new Error('Please select an image file');
         }
 
-        // Append file (automatically gets multipart/form-data)
+        const formData = new FormData();
         formData.append('image', imageFile);
 
-        // Append metadata as Blob with explicit JSON content type
-        // const metadata = {
-        //     productName: document.getElementById('paintingTitle').value,
-        //     Price: parseFloat(document.getElementById('paintingPrice').value),
-        //     description: document.getElementById('paintingDescription').value,
-        //     style: "Modern"
-        // }; 
         const metadata = {
-            productName: "testkjasdlf;kjas",
-            Price: 10.00,
-            description: "kfdsjafl;asdjflksadjf;lsadjflksdjfl;asdkjflkjklsajdklsajda",
+            productName: document.getElementById('paintingTitle').value,
+            Price: parseFloat(document.getElementById('paintingPrice').value),
+            description: document.getElementById('paintingDescription').value,
             style: "Modern"
         };
 
@@ -37,48 +29,48 @@ document.getElementById('uploadButton').addEventListener('click', async function
             { type: 'application/json' }
         ));
 
-        // Send with Authorization header if needed
-        const response = await fetch('http://localhost:8080/api/products', {
-            method: 'POST',
+        // Upload product with image and metadata
+        const response = await axios.post('http://localhost:8080/api/products', formData, {
             headers: {
-                // Include this if your API requires authentication
-                // 'Authorization': 'Bearer ' + localStorage.getItem('token')
-            },
-            body: formData
-            // Don't set Content-Type header - browser will set it with boundary
+                'Authorization': 'Bearer ' + localStorage.getItem('jwtToken')
+            }
         });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.message || 'Upload failed');
+        if (response.status !== 200 && response.status !== 201) {
+            const errorData = response.data;
+            throw new Error(errorData.message || 'Product upload failed');
         }
 
-        // Handle success
+        // Hide modal and notify success
         const modal = bootstrap.Modal.getInstance(document.getElementById('uploadModal'));
         modal.hide();
         alert('Product uploaded successfully!');
-        const data = await response.json();
-        const sizeData = JSON.stringify({
-            productId: data.body.Id,
+
+        const data = response.data;
+
+        const sizePayload = {
+            productName: data.productName,
             size: document.getElementById('paintingSize').value,
             length: document.getElementById('paintingLength').value,
             width: document.getElementById('paintingWidth').value,
             quantity: document.getElementById('paintingQuantity').value,
             additionalPrice: 0.0
-        });
-        const sizeResponse = await fetch('http://localhost:8080/api/product-sizes', {
-            method: 'POST',
+        };
+
+        // Upload product size
+        const sizeResponse = await axios.post('http://localhost:8080/api/product-sizes', sizePayload, {
             headers: {
-                'Content-Type': 'application/json',
-            },
-            body: sizeData
+                'Authorization': 'Bearer ' + localStorage.getItem('jwtToken'),
+                'Content-Type': 'application/json'
+            }
         });
 
-        if (!sizeResponse.ok) {
-            const errorData = await sizeResponse.json();
-            throw new Error(errorData.message || 'Upload failed');
+        if (sizeResponse.status !== 200 && sizeResponse.status !== 201) {
+            const errorData = sizeResponse.data;
+            throw new Error(errorData.message || 'Size upload failed');
         }
 
+        alert('Product size uploaded successfully!');
 
     } catch (error) {
         console.error('Upload error:', error);

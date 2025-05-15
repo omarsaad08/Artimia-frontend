@@ -11,6 +11,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     errorElement.classList.add('d-none');
 
     // Disable button during request
+    console.log(loginButton);
     loginButton.disabled = true;
     loginButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Logging in...';
 
@@ -36,17 +37,11 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         if (data.token) {
             // Using localStorage (persists until cleared)
             localStorage.setItem('jwtToken', data.token);
-
-            // window.location.href = '/index.html';
-            const userData = await fetch(`http://localhost:8080/api/users/email/${email}`, {
-                method: "GET"
-            })
-            const user = await userData.json();
-            console.log(user);
-            window.location.href = '/screens/seller/home.html';
-            if (user.role === 'USER') {
+            localStorage.setItem('userId', data.userId);
+            // window.location.href = '/screens/seller/home.html';
+            if (data.role === 'USER') {
                 window.location.href = '/index.html';
-            } else if (user.role === 'ADMIN') {
+            } else if (data.role === 'ADMIN') {
                 window.location.href = '/screens/seller/home.html';
             }
         } else {
