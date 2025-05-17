@@ -2,7 +2,7 @@
     style for sign in and sign up pages
 */
 body {
-    background-image: url('/assets/background.svg');
+    background-image: url('/brand\ content/singnin.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }

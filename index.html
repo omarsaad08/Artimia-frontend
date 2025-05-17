@@ -6,18 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-        rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Baumans&family=Climate+Crisis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Unica+One&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/style/normalize.css" />
     <link rel="stylesheet" href="/style/import.css" />
     <link rel="stylesheet" href="/style/home.css" />
 
     <title>Home</title>
+
+    
+
+
 </head>
 
-<body>
+<body style="background-color: rgb(69, 36, 10);">
     <!-- Navbar -->
     <div class="top">
         <!-- *****************      navbar top         *************-->
@@ -40,7 +43,7 @@
                     <div class="icons">
                         <i><img src="/icons/search.jpg "style="border-radius: 50%;"  width="20px"></i>
                         <i><img src="/icons/heeart.jpeg" style="border-radius: 50%;" width="20px"></i>
-                        <i><img src="/icons/cart.png" style="border-radius: 50%;" width="20px"></i>
+                        <i><a href="/screens/customer/cart.html" class="cart"><img src="/icons/cart.png" style="border-radius: 50%;" width="20px"></a></i>
                     </div>
                 </div>
         <!-- *****************      navbar top         ************* -->
@@ -59,9 +62,9 @@
                     <!--navbar links-->
                     <div class="collapse navbar-collapse" style="justify-content: center;" id="collapsibleNavbar">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="/workshops_landing.html" class="nav-link">workshops</a></li>
-                            <li class="nav-item"><a href="/gallery.html" class="nav-link">gallery</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">customized</a></li>
+                            <li class="nav-item"><a href="/screens/customer/workshops_landing.html" class="nav-link">workshops</a></li>
+                            <li class="nav-item"><a href="/screens/customer/allPaintings.html" class="nav-link">gallery</a></li>
+                            <li class="nav-item"><a href="/screens/customer/customized.html" class="nav-link">customized</a></li>
                         </ul>
                     </div>
                 </div>
@@ -69,7 +72,8 @@
         </div>
         <!-- *****************      main navbar         ************* -->
     </div>
-    <!-- Rest of your HTML remains the same -->
+
+
     <!-- Landing -->
     <section class="content-section">
         <div class="container">
@@ -86,18 +90,22 @@
                     <a href="#" class="btn mt-3">Learn More</a>
                 </div>
 
-                <!-- Image Column -->
+                <!-- fareed -->
                 <div class="col-lg-6 img-container">
                     <img src="/brand content/farid.png" alt="Description" class="section-image" />
                 </div>
+
             </div>
         </div>
     </section>
+
+
     <!-- Gallery Section -->
     <section class="features-section">
         <div class="container">
+            
             <!-- Section Header -->
-            <div class="section-header text-center">
+            <div class="section-header text-center" style="color: antiquewhite;">
                 <h2 class="display-5">Our Paintings</h2>
                 <p class="lead text-muted">Discover what makes us special</p>
             </div>
@@ -123,6 +131,8 @@
             </div>
         </div>
     </section>
+
+
     <!-- Testimonials -->
     <!-- Testimonials Section -->
     <section class="testimonials-section">
