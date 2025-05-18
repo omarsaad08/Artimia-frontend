@@ -12,7 +12,6 @@
     justify-content: center;
     align-items: flex-end; 
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #fff0cf 0%, #612805 100%) !important;
   }
 
 
@@ -169,16 +168,7 @@
   }
   
 
-  .overlay-bg {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4); /* optional dark overlay */
-    
-    z-index: 1;
-  }
+ 
   .btn{
     position: absolute;
     bottom: 5%;
@@ -196,36 +186,4 @@
   }
 
 
-  
-#footer{
-  display: flex;
-  bottom: 0;
-  height: 200px;
-  width: 100%;
-  background-color: rgb(95, 50, 30);
-  margin-top: 00px;
-  padding: 20px 10px;
-  flex-direction: column;
-  text-align: center;
-}
-#footer h1{
-  color: white;
-  padding-top: 30px;
-}
-#footer p{
-  color:white
-}
-.icons{
-  background-color: transparent;
-  color: rgb(241, 221, 184);
-  font-size: 30px;
-  cursor: pointer;
-}
-.copyright{
-  justify-content: center;
-  color: white;
-  margin-top: 20px;
-}
-.cridet{
-  color: aliceblue;
-}
+ 

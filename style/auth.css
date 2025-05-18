@@ -2,11 +2,34 @@
     style for sign in and sign up pages
 */
 body {
-    background-image: url('/brand\ content/singnin.jpg');
+    background-image: url('/brand\ content/signin.jpg');
     background-size: cover;
+    font-family: Cormorant Garamond;
     background-repeat: no-repeat;
+}
+.fullForm{
+    position: relative;
+    height: 200px;
+    margin-inline: 0;
+}
+.login-box{
+    width: 350px;
 }
 
 label {
-    color: black;
+    color: rgb(58, 28, 7);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.255);
+}
+
+.form{
+}
+
+.form-floating{
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.304);
+}
+
+button{
+    box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.304);
+    background-color: bisque;
+
 }

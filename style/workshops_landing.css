@@ -51,9 +51,9 @@
   .character-img {
     width: 37%;
     max-width:240px;
-    height: 47%;
+    height: 49%;
     position: absolute;
-    top: 20%; 
+    top: 35%; 
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -69,7 +69,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.4); /* optional dark overlay */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 1;
   }
 
