@@ -131,6 +131,26 @@ body {
 .button{
     box-shadow:1px 1px 10px rgba(0, 0, 0, 0.726);
 }
+  button{
+    position: absolute;
+    z-index: 2;
+    
+    background-color: rgb(58, 14, 0) !important; 
+    border: none !important;
+    border-radius: 50px !important;
+    color: rgb(251, 224, 190) !important;
+    text-shadow: 2px 2px 8px black !important;
+    box-shadow: 2px 2px 8px black;
+  }
+
+  button:hover {
+  background-color: #ffd7b92a !important;
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 2px 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(8px);
+
+}
 
 /* footer */
 footer {

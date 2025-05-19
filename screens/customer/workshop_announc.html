@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/workshops_announc.css">
+    <link rel="stylesheet" href="/style/customized.css">
     <link rel="stylesheet" href="/style/normalize.css" />
     <link rel="stylesheet" href="/style/import.css" />
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/style/customized.css">
 
     
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <title>monthly workshop</title>
 </head>
+
+
 <body>
     <div class="top">
         <!-- *****************      navbar top         *************-->
@@ -71,56 +73,67 @@
     <!--    *************    main content   >>>>>>>>>>>>>>>>>>>   -->
 
       <div class="overlay-bg"></div>
-
-    <div class="container-fluid">
+      <div class="first-section">
         <!-- Character overlay -->
          <img src="/brand content/farid.png" alt="Character" class="character-img">
-         <div class="deitals"><h2 class="content_text" > here's the workshop deitals</h2></div>
-
+         <div ><h2 class="form-title" > here's the workshop deitals</h2></div>
          <div class="row no-gutters"> 
             <div class="col-md-6 image-section offset-md-6 half-container">
                 <img src="/paintings/boho green caligraphy.jpg" class="image" alt="Right Image">
-                <div class="overlay">
-                    <h2></h2>
-                    <button class="btn">Click Right</button>
-                </div>
+                <button class="btn">Click Right</button>
             </div>
-        </div>
-    </div>   
+         </div>
+        </div>   
 
 
     <div class="fareed">
         <img src="/brand content/farid.png" alt="" class="farid">
         <p class="speech">hello there </p>
     </div>
+    
+    <h2 class="form-title">Monthly Art Workshop Booking</h2>
 
-    <form action="#" method="post" class="monthly-workshop-form">
-        <h2>Monthly Art Workshop Booking</h2>
-      
-        <label for="fullName">Full Name:</label>
-        <input type="text" id="fullName" name="fullName" required>
-      
+<div class="container form-container">
+    <form style="width: 90%;" >
+        
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" class="form-control" required>
+        </div>
+
+        <div class="form-group">
         <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="workshopDate">Workshop Date:</label>
+            <input type="text" id="workshopDate" name="workshopDate" value="May 25, 2025" readonly class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Have you tried pouring art before?</label>
+            <select id="experience" name="experience" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
       
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-      
-        <label for="workshopDate">Workshop Date:</label>
-        <input type="text" id="workshopDate" name="workshopDate" value="May 25, 2025" readonly>
-      
-        <label for="experience">Have you tried pouring art before?</label>
-        <select id="experience" name="experience" required>
-          <option value="" disabled selected>Select an option</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-      
-        <label for="goals">What would you like to get out of this workshop?</label>
-        <textarea id="goals" name="goals" rows="4" placeholder="Tell us more..."></textarea>
-      
-        <button type="submit">Reserve Your Spot</button>
-      </form>
+        <div class="form-group">
+            <label for="goals">What would you like to get out of this workshop?</label>
+            <textarea id="goals" name="goals" rows="4" placeholder="Tell us more..." class="form-control"></textarea>
+        </div>
+        
+      <button type="submit" class="btn btn-dark btn-block submit">reserve your spot now</button>
+    
+    </form>
+</div>
 
     <!-- footer-->
     <footer id="footer" style="justify-content: center;">

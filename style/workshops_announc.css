@@ -15,175 +15,158 @@
   }
 
 
-.container-fluid {
-    margin: 0;
-    margin-bottom: 200px;
-    padding: 0 20px;
-    width: 100%;
+.first-section{
+  position: relative;
+  margin: 0;
+  margin-bottom: 200px;
+  padding: 0 20px;
+  width: 100%;
   }
 
-  
+  .top{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    background-color: transparent;
+  }
+.navbar-top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center space-between;
+    background-color: rgb(255, 228, 196);
+}
+
+.navbar{
+    z-index: 999;
+    margin: 0;
+    width: 100%;
+    justify-content: center;
+    background-color: rgba(238, 222, 204, 0.51);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.184);
+
+}
+
+
+.social-link i img{
+    margin-left:10px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.sociala-link i img:hover{
+    border-radius: 50px ;
+}
+@media screen and (max-width:420px){
+    .social-link i img{
+        width:20px;
+    }
+}
+
+.logo{
+    background: transparent;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    font-weight: 20px bold;
+}
+@media screen and (max-width:420px){
+    .logo h3{
+        font-size: 0px;
+        border: 0px;
+    }
+}
+
+.icons i img{
+
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+@media screen and (max-width:420px){
+    .icons i img{
+        width:20px;
+    }
+}
+
+
+.navbar-nav{
+    justify-content: center;
+}
+
+.nav-link{
+    margin-left: 30px;
+    font-weight: bold;
+    color: rgb(104, 49, 49);
+    cursor: pointer;
+}
+.nav-link:hover{
+    color: rgb(184, 115, 75);
+}
+
 .image-section {
     position: relative;
     height: 80vh; 
     width: 40%;
     right: 0;
-    padding-top: 20vh;
+    padding-top: 0px;
     padding-right: 0; 
     border-radius: 20px;
 
     overflow: hidden;
 }
 
-  .image {
-    margin-top: 25%;
-    width: 100%;
-    height: 100%;
-    right: 0;
-    border-radius: 20px;
-    object-fit: cover;
-    box-shadow: 20px 20px 20px rgba(21, 21, 21, 0.468);
-  }
+.image {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.829) !important;
+}
 
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 2;
-  }
+.character-img {
+  width: 55%;
+  max-width: 300px;
+  height: 70%;
+  position: absolute;
+  top:20%;
+  left: 20%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
 
-  .character-img {
-    width: 37%;
-    max-width:240px;
-    height: 47%;
-    position: absolute;
-    top:20%;
-    left: 20%;
-    transform: translateX(-50%);
-    z-index: 3;
-  }
-
-  .deitals{
-    width: 40%;
-    height: 20%;
-    position:absolute ;
-    left: 5%;
-    bottom: 10%;
-    margin-top: 20%;
-    justify-content: center;
-    background-color:bisque;
-    box-shadow: 20px 20px 20px rgba(21, 21, 21, 0.468);
-    border-radius: 20px;
-  }
-  .content_text{
-    width: 100%;
-    height: 100%;
-    left: 20%;
-    overflow: visible;
-
-  }
-  .half-container {
-    padding: 0;
-  }
+.half-container {
+  padding: 0;
+}
 
   /*       --------------  farid  -----------------    */
 
-  .fareed{
-    position: fixed;
+.fareed{
 }
 .farid{
-    position: fixed;
-    width: 15%;
-    min-width: 200px;
-    right: 50px;
-    bottom: 230px;
+  position: absolute;
+  width: 15%;
+  min-width: 200px;
+  right: 50px;
+  bottom: 230px;
 }
 .speech{
-    position: fixed;
-    right: 5px;
-    bottom: 60px;
-    width: 20%;
-    height: 20%;
-    min-width: 200px;
-    z-index: 2000;
-    text-align: center;
-    background-color: rgba(250, 235, 215, 0.855);
-    border-radius: 20px;
+  position: absolute;
+  right: 5px;
+  bottom: 60px;
+  width: 20%;
+  height: 20%;
+  min-width: 200px;
+  z-index: 2000;
+  text-align: center;
+  background-color: rgba(250, 235, 215, 0.855);
+  border-radius: 20px;
 }
-
-
-
-  .monthly-workshop-form {
-    width: 70%;
-    max-width: 1000px;
-    margin-top: 250px;
-    margin-bottom: 150px;
-    margin-inline: auto;
-    padding: 1.5rem;
-    background: #ffe0b19a;
-    border-radius: 1rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.34);
-    font-family: sans-serif;
-  }
-  
-  .monthly-workshop-form h2 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .monthly-workshop-form label {
-    display: block;
-    margin-top: 1rem;
-    font-weight: bold;
-  }
-  
-  .monthly-workshop-form input,
-  .monthly-workshop-form select,
-  .monthly-workshop-form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-  }
-  
-  .monthly-workshop-form button {
-    margin-top: 1.5rem;
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #000;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .monthly-workshop-form button:hover {
-    background-color: #333;
-  }
-  
-
- 
-  .btn{
-    position: absolute;
-    bottom: 5%;
-    border-radius: 10px;
-    background-color: rgba(255, 235, 205, 0.503);
-    box-shadow: 20px 20px 20px rgba(21, 21, 21, 0.863);
-    transition: transform 0.5s ease, box-shadow 0.s ease;
-
-  }
-  .btn:hover {
-    background-color: rgba(255, 235, 205, 0.778);
-
-    transform:  translateY(-5px);
-    box-shadow: 20px 20px 20px rgba(21, 21, 21, 0.863);
-  }
 
 
  

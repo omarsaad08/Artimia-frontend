@@ -70,7 +70,6 @@
 
     .img-container {
         order: -1;
-        /* Makes image appear first on mobile */
     }
 }
 
@@ -158,12 +157,10 @@
     overflow: hidden;
 }
 
-/* Remove default indicators */
 .carousel-indicators {
     display: none;
 }
 
-/* Remove navigation arrows */
 .carousel-control-prev,
 .carousel-control-next {
     display: none;
