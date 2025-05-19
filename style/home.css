@@ -28,6 +28,7 @@
 
 .section-content {
     position: relative;
+    word-spacing: 15px;
     width: 60%;
     left: 13%;
     z-index: 100;
