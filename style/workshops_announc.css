@@ -146,22 +146,28 @@
 
   /*       --------------  farid  -----------------    */
 
+.wrapper{
+position: relative;
+  top: 150px;  z-index: 20;
+}
 .fareed{
+  position: sticky;
+  top: 50px;
+  z-index: 100;
 }
 .farid{
-  position: absolute;
-  width: 15%;
+  z-index: 100;
+  top: 100px;
+  width: 20%;
   min-width: 200px;
-  right: 50px;
+  left: 5%;
   bottom: 230px;
 }
 .speech{
-  position: absolute;
-  right: 5px;
+  left: 5%;
   bottom: 60px;
   width: 20%;
-  height: 20%;
-  min-width: 200px;
+  height: 40%;
   z-index: 2000;
   text-align: center;
   background-color: rgba(250, 235, 215, 0.855);

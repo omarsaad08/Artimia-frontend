@@ -12,8 +12,32 @@ body {
     height: 200px;
     margin-inline: 0;
 }
+.title{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    word-spacing: 8px;
+
+    color: #fde9d2;
+    text-shadow: 2px 3px 15px rgba(0, 0, 0, 0.69);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Cinzel Decorative ;
+    z-index: 2;
+}
 .login-box{
     width: 350px;
+}
+.signup{
+    z-index: 2; 
+    width: 50%; 
+    background-color: rgb(58, 14, 0) !important; 
+    border: none !important;
+    border-radius: 50px !important;
+    color: rgb(251, 224, 190) !important;
+    text-shadow: 2px 2px 8px black !important;
+    box-shadow: 2px 2px 8px black;
 }
 
 label {
@@ -28,7 +52,8 @@ label {
     box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.304);
 }
 
-button{
+input 
+{
     box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.304);
     background-color: bisque;
 

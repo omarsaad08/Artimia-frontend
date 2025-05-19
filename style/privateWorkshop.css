@@ -16,184 +16,51 @@
 
   }
 
+  .overlay-bg{
+    background-color: #ac896b5f !important;
+    backdrop-filter: blur(3px) !important;
+    z-index: -1 !important;
+  }
+  .form-title{
+    text-shadow: 2px 4px 8px black !important;
+  }
+
   /*<<<<<<<<<<<<<<<<<<<      first container      >>>>>>>>>>>>>>*/
-  .container-fluid {
-    margin: 0;
-    padding: 0 20px;
-    width: 100%;
-  }
-
-  .top{
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    background-color: transparent;
-  }
-.navbar-top{
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.597);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center space-between;
-    background-color: rgb(255, 228, 196);
-}
-.nav-item{
-    background-color: transparent;
-}
-.navbar{
-    z-index: 999;
-    margin: 0;
-    width: 100%;
-    justify-content: center;
-    background-color: rgba(238, 222, 204, 0.51);
-    box-shadow: inset;
-
-}
-.navbar-toggler{
-    background-color: transparent;
-}
-.navbar-nav{
-    background-color: transparent;
-}
-
-.social-link i img{
-    background-color: transparent;
-    margin-left:10px;
-    transition: 1s ease;
-    cursor: pointer;
-}
-.sociala-link i img:hover{
-    border-radius: 50px ;
-}
-@media screen and (max-width:420px){
-    .social-link i img{
-        width:20px;
-    }
-}
-
-.logo{
-    background: transparent;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-@media screen and (max-width:420px){
-    .logo h3{
-        font-size: 0px;
-        border: 0px;
-    }
-}
-
-.icons{
-    gap: 3px;
-    display: flex;
-    justify-content: center;
-    margin-left: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-@media screen and (max-width:420px){
-    .icons i img{
-        width:20px;
-    }
-}
-
-
-.navbar-nav{
-    justify-content: center; 
-}
-
-.nav-link{
-    margin-left: 30px;
-    font-weight: bold;
-    color: rgb(104, 49, 49);
-    cursor: pointer;
-}
-.nav-link:hover{
-    color: rgb(184, 115, 75);
-}
+  
 
 .fareed{
     position: fixed;
+    z-index: 100;
 }
 .farid{
     position: fixed;
     width: 15%;
-    min-width: 200px;
-    right: 50px;
+    left: 50px;
     bottom: 230px;
 }
 .speech{
     position: fixed;
-    right: 5px;
+    left: 5px;
     bottom: 60px;
     width: 20%;
     height: 20%;
-    min-width: 200px;
     z-index: 5000;
     text-align: center;
     background-color: rgba(250, 235, 215, 0.855);
     border-radius: 20px;
 }
+@media (max-width: 768px) {
+    .farid, .speech{
+        left: 0;
+        width: 150px;
+    }
+}
 
 
 /*   **************************         form          ****************         */
-.form-container {
-    background-color: rgba(255, 222, 190, 0.6); /* soft warm tone */
-    max-width: 800px;
-    padding-top: 150px;
-    padding-bottom: 50px;
-    margin-bottom: 200px;
-    border-radius: 20px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(4px);
-  }
-  
-  .form-title {
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #5e3b2c;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-  }
-  
-  .form-group label {
-    font-weight: 600;
-    color: #4b2a1a;
-    margin-bottom: 5px;
-  }
-  
-  .form-control {
-    border-radius: 10px;
-    border: 1px solid #d8b190;
-    padding: 10px 15px;
-    transition: border-color 0.3s;
-  }
-  
-  .form-control:focus {
-    border-color: #a05a2c;
-    box-shadow: 0 0 5px rgba(160, 90, 44, 0.5);
-  }
-  
-  button[type="submit"] {
-    background-color: #5e3b2c;
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    padding: 12px 30px;
-    font-weight: 600;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #7a513a;
-  }
-  
+label{
+    color: #4e2a1b;
+}
 /* <<<<<<<<<<   footer  >>>>>>>>>*/
 
 #footer{

@@ -27,7 +27,7 @@
     height: 150%;
     width: 1000%;
     background: rgba(64, 23, 5, 0.581);
-    z-index: 0;
+    z-index: -2;
   }
 
   /*<<<<<<<<<<<<<<<<<<<      first container      >>>>>>>>>>>>>>*/
@@ -38,20 +38,19 @@
     width: 100%;
   }
  
-.fareed{
-    position: fixed;
-    z-index: 1000;
+.fareedC{
+  position: relative;
+  left: 10px;
+  z-index: 1000;
 }
-.farid{
+.faridC{
     position: fixed;
     width: 15%;
     min-width: 200px;
-    right: 50px;
     bottom: 230px;
 }
-.speech{
+.speechC{
     position: fixed;
-    right: 5px;
     bottom: 60px;
     width: 20%;
     height: 20%;
@@ -99,6 +98,7 @@
     margin-top: 50px;
     margin-bottom: 30px;
     text-align: center;
+    word-spacing: 8px;
 
     color: #fde9d2;
     text-shadow: 2px 3px 15px rgba(255, 225, 205, 0.69);

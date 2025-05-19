@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style/privateWorkshop.css">
+    <link rel="stylesheet" href="/style/customized.css">
+
     <link rel="stylesheet" href="/style/normalize.css">
     <link rel="stylesheet" href="/style/import.css" />
 
     <link rel="stylesheet" href="/css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Unica+One&display=swap" rel="stylesheet">
+
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <title>privat workshop</title>
@@ -68,68 +72,71 @@
 </div>
 
 
+<div class="overlay-bg"></div>
+
 <div class="main-content">
+  
+  <!--*********************       form        ******************************-->
+  
+  <h2 class="form-title">Book Your Private Workshop!</h2>
+  
+  <div class="container form-container">
     
-    <!--*********************       form        ******************************-->
-
-    
-
-    <div class="container form-container">
-        <h2 class="form-title">Book Your Private Workshop!</h2>
-        <form>
-          <div class="form-group">
-            <label for="fullName">Full Name</label>
-            <input type="text" class="form-control" id="fullName" name="fullName" required>
-          </div>
+    <form style="width: 90%;">
       
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-          </div>
-      
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" class="form-control" id="phone" name="phone" required>
-          </div>
-      
-          <div class="form-group">
-            <label for="preferredDate">Preferred Date</label>
-            <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
-          </div>
-      
-          <div class="form-group">
-            <label for="groupSize">Number of Participants</label>
-            <input type="number" class="form-control" id="groupSize" name="groupSize" min="1" max="10" required>
-          </div>
-      
-          <div class="form-group">
-            <label for="experience">Have you tried pouring art before?</label>
-            <select class="form-control" id="experience" name="experience" required>
-              <option value="" disabled selected>Select an option</option>
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
-            </select>
-          </div>
-      
-          <div class="form-group">
-            <label for="goals">What would you like to get out of this workshop?</label>
-            <textarea class="form-control" id="goals" name="goals" rows="4" placeholder="Tell us more..."></textarea>
-          </div>
-      
-          <div class="form-group">
-            <label for="preferences">Any preferences or special requests?</label>
-            <textarea class="form-control" id="preferences" name="preferences" rows="3" placeholder="Optional..."></textarea>
-          </div>
-      
-          <button type="submit" class="btn">Book Now</button>
-        </form>
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" required>
       </div>
-
-
-      <div class="fareed">
-        <img src="/brand content/farid.png" alt="" class="farid">
-        <p class="speech">hello there </p>
-    </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="preferredDate">Preferred Date</label>
+        <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="groupSize">Number of Participants</label>
+        <input type="number" class="form-control" id="groupSize" name="groupSize" min="1" max="10" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="experience">Have you tried pouring art before?</label>
+        <select class="form-control" id="experience" name="experience" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="goals">What would you like to get out of this workshop?</label>
+        <textarea class="form-control" id="goals" name="goals" rows="4" placeholder="Tell us more..."></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="preferences">Any preferences or special requests?</label>
+        <textarea class="form-control" id="preferences" name="preferences" rows="3" placeholder="Optional..."></textarea>
+      </div>
+      
+      <button type="submit" class="submit">Book Now</button>
+    
+    </form>
+  </div>
+  
+  <div class="fareed">
+    <img src="/brand content/farid.png" alt="" class="farid">
+    <p class="speech">hello there </p>
+  </div>
 
 </div>
 

@@ -15,11 +15,13 @@
     <link rel="stylesheet" href="/style/normalize.css" />
     <link rel="stylesheet" href="/style/import.css" />
     <link rel="stylesheet" href="/style/allPaintings.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Unica+One&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-     <!-- Navbar -->
-     <div class="top">
+    <!-- Navbar -->
+    <div class="top">
         <!-- *****************      navbar top         *************-->
                 <div class="navbar-top">
                     <div class="social-link">
@@ -33,16 +35,18 @@
                         </ul>
                     </div>
                     
-                <div id="guestButtons" class="auth d-flex">
-                    <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
-                    <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
-                </div>
+                    <div id="guestButtons" class="auth d-flex">
+                        <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
+                        <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
+                    </div>
+                    
                     <div class="icons">
                         <i><img src="/icons/search.jpg "style="border-radius: 50%;"  width="20px"></i>
                         <i><img src="/icons/heeart.jpeg" style="border-radius: 50%;" width="20px"></i>
-                        <i> <a href="cart.html" class="nav-link"><img src="/icons/cart.png" style="border-radius: 50%;" width="20px"></a></i>
+                        <i><a href="/screens/customer/cart.html" class="cart"><img src="/icons/cart.png" style="border-radius: 50%;" width="20px"></a></i>
                     </div>
                 </div>
+
         <!-- *****************      navbar top         ************* -->
 
 
@@ -59,9 +63,9 @@
                     <!--navbar links-->
                     <div class="collapse navbar-collapse" style="justify-content: center;" id="collapsibleNavbar">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="/workshops_landing.html" class="nav-link">workshops</a></li>
-                            <li class="nav-item"><a href="/gallery.html" class="nav-link">gallery</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">customized</a></li>
+                            <li class="nav-item"><a href="/screens/customer/workshops_landing.html" class="nav-link">workshops</a></li>
+                            <li class="nav-item"><a href="/screens/customer/allPaintings.html" class="nav-link">gallery</a></li>
+                            <li class="nav-item"><a href="/screens/customer/customized.html" class="nav-link">customized</a></li>
                         </ul>
                     </div>
                 </div>
@@ -70,11 +74,12 @@
         <!-- *****************      main navbar         ************* -->
     </div>
 
+<div class="overlay-bg"></div>
 
     <div class="container">
         <!-- Page Header -->
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1>Browse Paintings</h1>
+            <h1 class="title">Browse Paintings</h1>
             <div class="view-options">
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-outline-secondary active">
@@ -182,7 +187,7 @@
                         <div class="mb-3">
                             <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary contact">Send Message</button>
                     </form>
                 </div>
             </div>

@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: var(--main-font);
+    font-family: Playfair Display;
 }
 
 /* navbar */
@@ -57,16 +57,29 @@ body {
     gap: 10px;
 }
 .btn-success{
- background-color: #543310;
- border: #fff0cf;
- color: #fff0cf;
+    position: relative;
+    left: 90%;
+ background-color: #543310 !important;
+ border: #fff0cf !important;
+ color: #fff0cf !important;
 }
 .btn-outline-success{
-    background-color: #fff0cf;
-    border: #543310;
-    color: #543310;
+    position: relative;
+    left: 90%;
+    background-color: #fff0cf !important;
+    border: #543310 !important;
+    color: #543310 !important;
 }
-
+.btn-success:hover{
+    background-color: #fff0cf !important;
+    border: #543310 !important;
+    color: #543310 !important;
+}
+.btn-outline-success:hover{
+    background-color: #543310 !important;
+ border: #fff0cf !important;
+ color: #fff0cf !important;
+}
 .social-link i img{
     background-color: transparent;
     margin-left:10px;
@@ -84,10 +97,10 @@ body {
 
 .logo{
     background: transparent;
+    position: absolute;
     width: 100%;
     height: 10vh;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 @media screen and (max-width:420px){
@@ -132,7 +145,6 @@ body {
     box-shadow:1px 1px 10px rgba(0, 0, 0, 0.726);
 }
   button{
-    position: absolute;
     z-index: 2;
     
     background-color: rgb(58, 14, 0) !important; 

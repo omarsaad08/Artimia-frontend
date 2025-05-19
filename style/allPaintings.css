@@ -1,14 +1,30 @@
 body {
-    background-color: var(--bg);
+    background-image: url(/brand\ content/intro3.png);
 }
 
-.navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.overlay-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 231, 211, 0.308);
+    z-index: -2;
 }
+.title{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    word-spacing: 8px;
 
-.navbar-brand {
-    font-weight: 700;
-    color: var(--clr1);
+    color: #fde9d2 !important;
+    text-shadow: 2px 3px 10px rgb(11, 5, 0);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Cinzel Decorative ;
+    z-index: 2;
 }
 
 .artwork-card {
@@ -63,12 +79,12 @@ body {
     color: white;
 }
 
-.btn-primary {
+.contact {
     background-color: var(--clr1);
     border-color: var(--clr1);
 }
 
-.btn-primary:hover {
+.contact:hover {
     background-color: var(--clr1);
     border-color: var(--clr1);
 }
@@ -109,19 +125,4 @@ body {
     border-radius: 20px;
 }
 
-nav:last-child ul li a {
-    background-color: var(--clr1) !important;
-    color: var(--bg);
-}
 
-nav:last-child ul li a:hover {
-    color: var(--bg) !important;
-}
-
-nav:last-child ul li.disabled a {
-    color: var(--clr3) !important;
-}
-
-nav:last-child ul li.active a {
-    border-color: var(--clr3);
-}

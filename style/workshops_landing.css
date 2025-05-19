@@ -86,7 +86,7 @@
     letter-spacing: 2px;
   }
   .booking{
-    
+    position: absolute;
     top: 70%;
     right: 70%;
     height: 60px;

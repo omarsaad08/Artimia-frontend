@@ -5,12 +5,44 @@
 
 body {
     background-color: #f8f9fa;
+    background-image: url(/brand\ content/intro3.png);
 }
 
-.navbar {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.overlay-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150%;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    background: rgba(255, 231, 211, 0.308);
+    z-index: -2;
 }
 
+.title{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    word-spacing: 8px;
+
+    color: #fde9d2;
+    text-shadow: 2px 3px 15px rgba(11, 5, 0, 0.69);
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Cinzel Decorative ;
+    z-index: 2;
+}
+
+.button{
+    position: relative;
+    left: 40%;
+    width: 20% !important;
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;
+    background-color: bisque ;
+}
 .cart-item {
     background-color: white;
     border-radius: 10px;
@@ -32,11 +64,19 @@ body {
 }
 
 .summary-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
-    top: 100px;
+    height: 350px;
+    margin-top: 100px;
+    top: 150px;
+    background-color: rgba(71, 31, 0, 0.46);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.993) !important;
+    
+}
+
+.text-muted{
+    gap: 50px;
 }
 
 .quantity-btn {
@@ -57,10 +97,27 @@ body {
 }
 
 .btn-checkout {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    position: absolute;
     padding: 10px;
     font-weight: 600;
+    position: relative;
+    top:5px;
+}
+.littel{
+    position: absolute;
+    left: 2%;
+}
+.fass{
+    position: absolute;
+    left: 50%;
+}
+#clearCartBtn{
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    width: 20% !important;
+    display: flex !important;
+    justify-content: center !important; 
 }
 
 .breadcrumb {
@@ -77,4 +134,8 @@ body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#checkout{
+    position: absolute;
 }

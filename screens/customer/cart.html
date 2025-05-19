@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="/style/normalize.css" />
     <link rel="stylesheet" href="/style/import.css" />
     <link rel="stylesheet" href="/style/cart.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Marcellus&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Unica+One&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -59,9 +61,9 @@
                     <!--navbar links-->
                     <div class="collapse navbar-collapse" style="justify-content: center;" id="collapsibleNavbar">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a href="/workshops_landing.html" class="nav-link">workshops</a></li>
-                            <li class="nav-item"><a href="/gallery.html" class="nav-link">gallery</a></li>
-                            <li class="nav-item"><a href="#" class="nav-link">customized</a></li>
+                            <li class="nav-item"><a href="workshops_landing.html" class="nav-link">workshops</a></li>
+                            <li class="nav-item"><a href="allPaintings.html" class="nav-link">gallery</a></li>
+                            <li class="nav-item"><a href="customized.html" class="nav-link">customized</a></li>
                         </ul>
                     </div>
                 </div>
@@ -69,10 +71,11 @@
         </div>
         <!-- *****************      main navbar         ************* -->
     </div>
+    <div class="overlay-bg"></div>
     <div class="container py-4">
         <div class="row">
             <div class="col-lg-8">
-                <h2 class="mb-4">Your Shopping Cart</h2>
+                <h2 class="mb-4 title">Your Shopping Cart</h2>
 
                 <!-- Cart Items Container (Will be populated by JavaScript) -->
                 <div class="cart-items" id="cartItemsContainer">
@@ -81,18 +84,18 @@
 
                 <!-- Cart Actions -->
                 <div class="d-flex justify-content-between mt-4">
-                    <a href="/screens/customer/allPaintings.html" class="btn btn-outline-primary">
-                        <i class="fas fa-arrow-left me-2"></i>Continue Shopping
+                    <a href="/screens/customer/allPaintings.html" class="btn btn-outline-primary ">
+                        <i class="fas fa-arrow-left me-2 Continue"></i><h5 class="">Continue Shopping</h5>
                     </a>
-                    <button class="btn btn-outline-danger" id="clearCartBtn">
-                        <i class="fas fa-trash me-2"></i>Clear Cart
+                    <button class="btn btn-outline-danger button" id="clearCartBtn">
+                        <i class="fas fa-trash me-2 clear"></i>Clear Cart
                     </button>
                 </div>
             </div>
 
             <!-- Order Summary -->
             <div class="col-lg-4">
-                <div class="summary-card p-4 mt-4 mt-lg-0">
+                <div class="summary-card p-4 mt-4 mt-lg-0 ">
                     <h4 class="mb-4">Order Summary</h4>
 
                     <div class="d-flex justify-content-between mb-2">
@@ -115,12 +118,8 @@
                         Proceed to Checkout
                     </button>
 
-                    <p class="text-muted small mb-0">
-                        <i class="fas fa-lock me-2"></i>Secure checkout
-                    </p>
-                    <p class="text-muted small">
-                        <i class="fas fa-undo me-2"></i>Easy returns
-                    </p>
+                    <p class="text-muted small mb-0"><i class="fas fa-lock me-2 littel"></i class="fass">Secure checkout</p>
+                    <p class="text-muted small"><i class="fas fa-undo me-2 littel"></i lass="fass">Easy returns</p>
                 </div>
             </div>
         </div>
