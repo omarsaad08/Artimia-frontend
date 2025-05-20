@@ -26,27 +26,27 @@
             <h2 class="mb-4 title">Login</h2>
             <form id="loginForm">
 
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                    <label for="email">Email</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" name="password" id="password" placeholder="Password"
-                        required>
-                    <label for="password">Password</label>
-                </div>
-
-                <button type="submit" class="btn btn-light w-100 mb-3" id="loginButton">Login</button>
-                <div id="errorMessage" class="alert alert-danger d-none mb-3"></div>
-                <p>Don't have an account? <a href="/screens/auth/signup.html" class="text-white fw-bold">Register</a>
-                </p>
+                <p style="color: red;" id="error_message"></p><form id="form">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password"required>
+                        <label for="password">Password</label>
+                    </div>
+                    <button type="submit" class="btn btn-light w-100 mb-3" id="loginButton">Login</button>
+                    <div id="errorMessage" class="alert alert-danger d-none mb-3"></div>
+                    <p>Don't have an account? <a href="/screens/auth/signup.html" class="text-white fw-bold">Register</a></p>
+                </form>
             </form>
         </div>
     </div>
 
-    <script src="/script/login.js">
-    </script>
+    <script src="/script/login.js"></script>
+    <script src="/script/validation.js"></script>
+
 </body>
 
 </html>

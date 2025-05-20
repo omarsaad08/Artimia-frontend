@@ -16,6 +16,25 @@
 
     <title>privat workshop</title>
 </head>
+
+<script>
+const speechText = document.getElementById("speechText");
+
+window.addEventListener("scroll", () => {
+  const y = window.scrollY;
+
+  if (y < 300) {
+    speechText.textContent = "Welcome to the workshop!";
+  } else if (y < 600) {
+    speechText.textContent = "Scroll down to book your spot.";
+  } else if (y < 1000) {
+    speechText.textContent = "Check the form carefully!";
+  } else {
+    speechText.textContent = "Don’t forget to click submit!";
+  }
+});
+</script>
+
 <body >
 
 
@@ -34,10 +53,13 @@
                     </ul>
                 </div>
                 
-            <div id="guestButtons" class="auth d-flex">
-                <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
-                <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
-            </div>
+                  <div id="guestButtons" class="auth d-flex">
+                    <div id="guestButtons" class="auth d-flex">
+                      <a href="/screens/auth/signin.html" class="btn btn-success">Sign in</a>
+                      <a href="/screens/auth/signup.html" class="btn btn-outline-success">Sign up</a>
+                    </div>
+                  </div>
+
                 <div class="icons">
                     <i><img src="/icons/search.jpg "style="border-radius: 50%;"  width="20px"></i>
                     <i><img src="/icons/heeart.jpeg" style="border-radius: 50%;" width="20px"></i>
@@ -133,11 +155,10 @@
     </form>
   </div>
   
-  <div class="fareed">
-    <img src="/brand content/farid.png" alt="" class="farid">
-    <p class="speech">hello there </p>
-  </div>
-
+  <div class="fareed" id="fareed">
+    <img src="/brand content/farid.png" alt="farid character" class="farid">
+    <p class="speech" id="speechText">A private session? Fancy. You must want my full attention. That comes with high expectations—and espresso.</p>
+</div>
 </div>
 
     <!-- footer-->

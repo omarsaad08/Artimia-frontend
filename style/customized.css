@@ -51,13 +51,20 @@
 }
 .speechC{
     position: fixed;
+    padding: 10px;
     bottom: 60px;
     width: 20%;
-    height: 20%;
+    height: 25%;
     min-width: 200px;
     z-index: 2000;
     text-align: center;
-    background-color: rgba(250, 235, 215, 0.855);
+    background-color: rgba(250, 235, 215, 0.803);
+    backdrop-filter: blur(3px);
+    color: #4e2a1b;
+    text-shadow: 2px 2px 8px rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Playfair Display;
     border-radius: 20px;
 }
 

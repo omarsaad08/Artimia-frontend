@@ -23,6 +23,7 @@
         <div class="login-box text-white text-center">
             <h2 class="mb-4 title">Sign Up</h2>
             <form action="" method="POST">
+                <p style="color: red;" id="error_message"></p><form id="form">         
                 <div class="form-floating mb-3">
                     <input type="firstName" class="form-control" name="firstName" id="firstName"
                         placeholder="First Name" required>
@@ -56,14 +57,16 @@
                         <option value="customer">Customer</option>
                     </select>
                 </div>
-                <!-- <a href="/screens/seller/home.html" class="btn btn-light w-100 mb-3">Sign up</a> -->
                 <input type="submit" id="signup-button" class="btn btn-light w-100 mb-3 signup ">Sign up</input>
                 <p>have an account? <a href="/screens/auth/signin.html" class="text-white fw-bold">Login</a></p>
+                </form>
             </form>
             <p id="error-message"></p>
         </div>
     </div>
     <script src="/script/signup.js"></script>
+    <script src="/script/validation.js"></script>
+
 </body>
 
 </html>

@@ -150,10 +150,13 @@
 position: relative;
   top: 150px;  z-index: 20;
 }
-.fareed{
+.fareed {
   position: sticky;
-  top: 50px;
-  z-index: 100;
+  top: 120px;
+  left: 30px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
 }
 .farid{
   z-index: 100;
@@ -163,16 +166,18 @@ position: relative;
   left: 5%;
   bottom: 230px;
 }
-.speech{
-  left: 5%;
-  bottom: 60px;
-  width: 20%;
-  height: 40%;
-  z-index: 2000;
-  text-align: center;
-  background-color: rgba(250, 235, 215, 0.855);
+.speech {
+  margin-top: 10px;
+  background-color: rgba(250, 235, 215, 0.615);
   border-radius: 20px;
+  padding: 10px 15px;
+  font-weight: bold;
+  max-width: 200px;
+  text-align: center;
 }
+
+
+
 
 
  

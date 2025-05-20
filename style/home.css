@@ -177,12 +177,32 @@
     width: 15%;
     height: auto;
     z-index: 10;
-    animation: float 3s ease-in-out infinite;
+    animation: float 7s ease-in-out infinite;
 
     background-size: cover;
     background-repeat: no-repeat;
 }
+.speech {
+     position: absolute;
+    left: 20px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 70%;
+    z-index: 10;
+    animation: float 5s ease-in-out infinite;
 
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+  margin-top: 10px;
+  backdrop-filter: blur(3px);
+  background-color: rgba(250, 235, 215, 0.534);
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-weight: bold;
+  max-width: 200px;
+  text-align: center;
+}
 /* Floating animation */
 @keyframes float {
     0% {
